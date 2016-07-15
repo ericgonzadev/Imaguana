@@ -14,7 +14,7 @@ if ($user->data()->group == 2) {
 $video = new Video();
 if(isset($_POST['submit'])){
     //Connection
-    mysql_connect("getenv('OPENSHIFT_MYSQL_DB_HOST')", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
+    mysql_connect("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
     mysql_select_db("imag") or die(mysql_error());
 
     //Variables holding the image info
