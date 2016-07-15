@@ -2,8 +2,8 @@
 require 'core/init.php';
 
 //Connection
-mysql_connect("sfsuswe.com", "s16g09", "9team2016") or die(mysql_error());
-mysql_select_db("student_s16g09") or die(mysql_error());
+mysql_connect("127.13.13.2:3306", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
+mysql_select_db("imag") or die(mysql_error());
 
 $user = new User();
 $videolist = new Video();

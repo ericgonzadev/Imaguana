@@ -4,10 +4,10 @@ session_start();
 
 $GLOBALS['config'] = array(
     'mysql' => array(
-        'host' => 'sfsuswe.com',
-        'username' => 's16g09',
-        'password' => '9team2016',
-        'db' => 'student_s16g09'
+        'host' => '127.13.13.2:3306',
+        'username' => 'admin67KSwkr',
+        'password' => 'c6hsZzfY7pGR',
+        'db' => 'imag'
     ),
     'remember' => array(
         'cookie_name' => 'hash',

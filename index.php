@@ -413,7 +413,7 @@ if (Input::exist()) {
                         <ul class="footer-social">
                             <li><a href="https://www.facebook.com/EricGonzalez1994" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/ericgonzalez1994" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://github.com/Twinpair/" target="_blank"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://github.com/admin67KSwkr/" target="_blank"><i class="fa fa-github"></i></a></li>
                             <li><a href="http://www.ericgonzalez1994.com/" target="_blank">Website</a></li>
                         </ul>
                     </div>
@@ -621,7 +621,7 @@ unset($_SESSION['notification']);
 
             <!-- Payments -->
             <div class="pull-right">
-                <p><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLeXhuZG1VZ0ViMVJlV01pR1o3NGlUOEUzeW53/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/Twinpair/Imaguana" target="blank">Source Code</a></p> 
+                <p><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLeXhuZG1VZ0ViMVJlV01pR1o3NGlUOEUzeW53/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/twinpair/Imaguana" target="blank">Source Code</a></p> 
             </div>
         </div>
     </div>

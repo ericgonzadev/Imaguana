@@ -2,8 +2,8 @@
 require 'core/init.php';
 
 //Connection
-mysql_connect("sfsuswe.com", "twinpair", "csc2016") or die(mysql_error());
-mysql_select_db("student_twinpair") or die(mysql_error());
+mysql_connect("127.13.13.2:3306", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
+mysql_select_db("imag") or die(mysql_error());
 
 $user = new User();
 ?>
@@ -212,7 +212,7 @@ $user = new User();
                                             <div class="accordion-inner">
                                                 <p>This website was made for demonstration purposes only. It is part of a course curriculum at San Francisco State University</p><br>
                                                 <p style="text-align: center;">Check out the Documentation and Source Code below: </p>
-                                                <p style="text-align: center;"><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLeXhuZG1VZ0ViMVJlV01pR1o3NGlUOEUzeW53/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/Twinpair/Imaguana" target="blank">Source Code</a></p>
+                                                <p style="text-align: center;"><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLeXhuZG1VZ0ViMVJlV01pR1o3NGlUOEUzeW53/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/admin67KSwkr/Imaguana" target="blank">Source Code</a></p>
                                             </div>
                                         </div>
                                     </div>

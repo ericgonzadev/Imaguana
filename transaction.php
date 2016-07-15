@@ -2,7 +2,7 @@
 require 'core/init.php';
     
 // Create connection
-$conn = new mysqli("sfsuswe.com", "s16g09", "9team2016", "student_s16g09");
+$conn = new mysqli("127.13.13.2:3306", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
