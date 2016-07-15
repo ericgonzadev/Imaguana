@@ -1,0 +1,46 @@
+#mainselection select {
+  color: white;
+  background: transparent;
+  font-size: 15px;
+  padding: 2px 10px;
+  height: 44px;
+  width: 115px;
+  *width: 115px;
+  *background: #58B14C;
+  border-style: none;
+  -webkit-appearance: none;
+}
+
+#mainselection {
+  overflow:hidden;
+  height: 41px;
+  width:115px;
+  background: #839ec8 url("http://i62.tinypic.com/15xvbd5.png") no-repeat scroll 80px center;
+}/*   #C1AE76 */
+
+#mainselection:hover {
+  background-color: #acbeda; /*  #D0C195 */
+}
+
+#mainselection select:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+@-moz-document url-prefix() {
+#mainselection select {
+  -moz-appearance:none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  color: white;
+  background: transparent;
+  font-size: 15px;
+  padding: 2px 10px;
+  height: 44px;
+  width: 115px;
+  *width: 115px;
+  *background: #58B14C;
+  border-style: none;
+  -webkit-appearance: none;
+ }
+}

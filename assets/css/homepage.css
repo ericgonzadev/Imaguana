@@ -1,0 +1,13 @@
+.ws-topbar-message a{
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 36px;
+}
+.ws-topbar .pull-left .ws-topbar-message a{
+	color: #fff;
+}
+.ws-topbar .pull-left .ws-topbar-message  a:hover{
+	color: #C2A476;		
+}
