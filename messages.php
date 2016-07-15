@@ -2,7 +2,7 @@
 require 'core/init.php';
 
 // Create connection
-$conn = new mysqli("127.13.13.2:3306", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
+$conn = new mysqli("getenv('OPENSHIFT_MYSQL_DB_HOST')", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

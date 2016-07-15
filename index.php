@@ -2,14 +2,14 @@
 require 'core/init.php';
 
 //Connection
-mysql_connect("127.13.13.2:3306", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
+mysql_connect("getenv('OPENSHIFT_MYSQL_DB_HOST')", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
 mysql_select_db("imag") or die(mysql_error());
 
 $user = new User();
 
 if (Input::exist()) { 
     // Create connection
-    $conn = new mysqli("127.13.13.2:3306", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
+    $conn = new mysqli("getenv('OPENSHIFT_MYSQL_DB_HOST')", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -532,7 +532,7 @@ unset($_SESSION['notification']);
     <?php 
     if (Input::exist()) { 
         // Create connection
-        $conn = new mysqli("127.13.13.2:3306", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
+        $conn = new mysqli("getenv('OPENSHIFT_MYSQL_DB_HOST')", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
 
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);

@@ -4,7 +4,7 @@ session_start();
 
 $GLOBALS['config'] = array(
     'mysql' => array(
-        'host' => '127.13.13.2:3306',
+        'host' => 'getenv('OPENSHIFT_MYSQL_DB_HOST')',
         'username' => 'admin67KSwkr',
         'password' => 'c6hsZzfY7pGR',
         'db' => 'imag'
