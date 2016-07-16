@@ -8,22 +8,17 @@ mysql_select_db("imag") or die(mysql_error());
 $user = new User();
 $imagelist = new Image();
 $modal = "";
-
 ?>
 
 <!doctype html>
 <head>
     <title>Imaguana | Browse</title>
-    <?php
-    $elements = explode('/', $_SERVER['REQUEST_URI']);
-    $user = $elements[1];
-    echo "<BASE href=\"/$user/\">";
-    ?>   
+
     <!-- CSS, Meta, Ajax, etc. -->
     <?php include 'view/head.php' ?>
 </head>
-<body>
 
+<body>
     <!-- Navigation Bar -->
     <?php include 'view/nav-bar-alt.php'; ?>
 

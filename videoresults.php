@@ -12,13 +12,13 @@ $modal = "";
 
 <!doctype html>
 <head>
-    <title>Imaguana | Browse</title
+    <title>Imaguana | Browse</title>
     
     <!-- CSS, Meta, Ajax, etc. -->
     <?php include 'view/head.php' ?>
 </head>
-<body>
 
+<body>
     <!-- Navigation Bar -->
     <?php include 'view/nav-bar-alt.php'; ?>
 
