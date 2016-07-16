@@ -7,32 +7,8 @@ mysql_select_db("imag") or die(mysql_error());
 
 $user = new User();
 
-if (Input::exist()) { 
-    // Create connection
-    $conn = new mysqli("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $message);
-
-    // set parameters and execute
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $stmt->execute();
-    $stmt->close();
-    $conn->close();
-    
-    $_SESSION['notification'] = "Thanks for your feedback!";
-    
-    header("location: ./#contact");
-}
-                    
 ?>
+
 <!doctype html>
 <head>
     <title>Imaguana | Home</title>
@@ -554,7 +530,7 @@ unset($_SESSION['notification']);
 
         header("location: ./#contact");
     }                  
-?>
+    ?>
 
     <!-- Footer Start -->
     <footer class="ws-footer" style="margin-top: -20px;">
