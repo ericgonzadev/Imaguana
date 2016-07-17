@@ -83,7 +83,7 @@ $navbar =
                         <li><a href="./">Home</a></li>
                         <li><a href="./#about">About US</a></li>
                         <li class="dropdown">
-                            <a href="imageresults.php" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">Browse<span class="caret"></span></a>
+                            <a class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">Browse<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="imageresults.php">Browse Images</a></li>
                                 <li><a href="videoresults.php">Browse Videos</a></li>
