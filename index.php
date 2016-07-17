@@ -374,10 +374,8 @@ $user = new User();
                         </h3>
                         <p>I am a student studying Computer Science at San Francisco State University. I enjoy long hikes and ostentatious titles.</p>
                         <ul class="footer-social">
-                            <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="" target="_blank">Website</a></li>
+                            <li><a href="https://www.facebook.com/aaron.waterman" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/arwaterman" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 text-center">
@@ -389,7 +387,7 @@ $user = new User();
                         <ul class="footer-social">
                             <li><a href="https://www.facebook.com/EricGonzalez1994" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/ericgonzalez1994" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://github.com/admin67KSwkr/" target="_blank"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://github.com/twinpair/" target="_blank"><i class="fa fa-github"></i></a></li>
                             <li><a href="http://www.ericgonzalez1994.com/" target="_blank">Website</a></li>
                         </ul>
                     </div>
@@ -400,24 +398,18 @@ $user = new User();
                         </h3>
                         <p>Grad student and SFSU staff member. I enjoy playing hockey and skiing.</p>
                         <ul class="footer-social" style="margin-top: 25px;">
-                            <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="" target="_blank">Website</a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100012472296075" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
 
                     <div class="col-sm-4 text-center">
                         <img class="img-responsive" src="assets/img/team/mchuang.png" alt="">
-                        <h3>Moses Chuang<br>
+                        <h3>Mon-Shih Chuang<br>
                             <small style="color: black;">Backend Developer</small>
                         </h3>
                         <p>I'm a graduate student at SFSU. I enjoy playing board games and video games.</p>
                         <ul class="footer-social">
-                            <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="" target="_blank">Website</a></li>
+                            <li><a href="https://www.facebook.com/magicaldonald" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
 
@@ -428,10 +420,8 @@ $user = new User();
                         </h3>
                         <p>I'm Graduate student at SFSU. I like to travel and enjoy natures beauty!</p>
                         <ul class="footer-social">
-                            <li><a href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="" target="_blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="" target="_blank">Website</a></li>
+                            <li><a href="https://www.facebook.com/monal.patil" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/monal-patil-51618915" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
@@ -469,9 +459,11 @@ $user = new User();
                     <!-- Contact Form -->
                     <div class="col-sm-6">
                         
-                    <?php if (isset($_SESSION['notification'])){echo "<p style='text-align: center; color: green'>" .$_SESSION['notification'] . " </p><br>";
+                    <?php 
+                    if (isset($_SESSION['notification'])){echo "<p style='text-align: center; color: green'>" .$_SESSION['notification'] . " </p><br>";
 unset($_SESSION['notification']);
-                    }else{
+                    }
+                    else{
                     ?>
                         <form class="form-horizontal ws-contact-form" method="POST" >
                             <!-- Name -->
@@ -510,9 +502,8 @@ unset($_SESSION['notification']);
         // Create connection
         $conn = new mysqli("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
 
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        die("Connection failed: " . $conn->connect_error) if ($conn->connect_error);
+
         // prepare and bind
         $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $message);
@@ -527,8 +518,6 @@ unset($_SESSION['notification']);
         $conn->close();
 
         $_SESSION['notification'] = "Thanks for your feedback!";
-
-        header("location: ./#contact");
     }                  
     ?>
 
