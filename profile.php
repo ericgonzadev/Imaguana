@@ -25,14 +25,18 @@ else {
 <!doctype html>
 <head>
     <title>Imaguana | Profile</title>
+
+    
+    
+    <!-- CSS, Meta, Ajax, etc. -->
+    <?php include 'view/head.php' ?>
     
     <?php
     $elements = explode('/', $_SERVER['REQUEST_URI']);
     $account = $elements[1];
+    echo $account;
+    echo "<BASE href=\"/$account/\">";
     ?>
-    
-    <!-- CSS, Meta, Ajax, etc. -->
-    <?php include 'view/head.php' ?>
     
 </head>
 <body>
