@@ -7,6 +7,7 @@ mysql_select_db("imag") or die(mysql_error());
 
 $elements = explode('/', $_SERVER['REQUEST_URI']);
 $account = $elements[1];
+echo $account . " " . $username;
 if (!$username)
     if (!$username = Input::get('user'))
         Redirect::to("/$account/");
@@ -28,6 +29,7 @@ else {
     <?php
     $elements = explode('/', $_SERVER['REQUEST_URI']);
     $account = $elements[1];
+    echo $account;
     echo "<BASE href=\"/$account/\">";
     ?>
     
