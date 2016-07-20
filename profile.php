@@ -14,7 +14,8 @@ if (!$username)
 $user = new User($username);
 if (!$user->exists()) {
     Redirect::to(404);
-} else {
+} 
+else {
     $data = $user->data();
     $user = new User();
 }
