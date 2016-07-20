@@ -4,4 +4,4 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
-RewriteRule ^.*$ %2controller.php [QSA,L]
+RewriteRule ^.*$ %2controller.php:3306 [QSA,L]
