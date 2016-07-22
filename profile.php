@@ -28,7 +28,6 @@ else {
     <?php
     $elements = explode('/', $_SERVER['REQUEST_URI']);
     $account = $elements[1];
-    echo "<BASE href=\"/$account/\">";
     ?>
     
     <!-- CSS, Meta, Ajax, etc. -->
