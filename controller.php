@@ -4,8 +4,11 @@ include_once 'controller/UserController.php';
 include_once 'controller/VideoController.php';
 
 $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
+echo "path: ". $path;
 $elements = explode('/', $path);                // Split path on slashes
+echo "elements: ". $elements;
 array_shift($elements);
+echo print_r(array_shift($elements));
 switch(array_shift($elements)) {
     case 'image':
         $controller = new ImageController();
@@ -20,11 +23,11 @@ switch(array_shift($elements)) {
         break;
 }
 
-$controller = new UserController();
+
 $action = array_shift($elements);
 $params = $elements;
 
-$controller->profile("Twinpair");
+$controller->$action($params);
 
 
 ?>
