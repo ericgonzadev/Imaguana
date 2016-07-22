@@ -20,6 +20,7 @@ switch(array_shift($elements)) {
         break;
 }
 
+$controller = new UserController();
 $action = array_shift($elements);
 $params = $elements;
 
