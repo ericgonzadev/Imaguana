@@ -58,8 +58,7 @@ $user = new User();
                             <?php $tags = preg_split('[, ]',$video->data()->tags); 
                             foreach($tags as $tag)
                                 echo '<a style="margin-top: 4px; color: #0000EE;" href=video/tag/'.$tag.' >'.$tag.'</a>  ';  ?>
-                                        </p>
-                            <p style="margin-top: 5px;"><?php echo $video->data()->tags; ?></p><br>
+                                        </p><br>
                             <div class="row">
                                 <div class="col-sm-6 col-sm-offset-4">
                                     <h3 class="pull-left" style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">License</span></h3>

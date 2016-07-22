@@ -16,7 +16,7 @@ $modal = "";
 
     <!-- CSS, Meta, Ajax, etc. -->
     <?php 
-        include 'view/head.php' 
+        include 'view/head.php'; 
         echo "<BASE href=\"/\">";
     ?>
 
