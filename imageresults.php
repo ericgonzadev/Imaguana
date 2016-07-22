@@ -15,7 +15,11 @@ $modal = "";
     <title>Imaguana | Browse</title>
 
     <!-- CSS, Meta, Ajax, etc. -->
-    <?php include 'view/head.php' ?>
+    <?php 
+        include 'view/head.php' 
+        echo "<BASE href=\"/\">";
+    ?>
+
 </head>
 
 <body>
