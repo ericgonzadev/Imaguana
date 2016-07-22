@@ -8,7 +8,7 @@ echo "path: ". $path. "\r\n";;
 $elements = explode('/', $path);                // Split path on slashes
 echo "elements: "; print_r($elements);  echo "\r\n";
 array_shift($elements);
-echo "array_shift($elements): " print_r(array_shift($elements)); echo "\r\n";
+echo "array_shift($elements): "; print_r(array_shift($elements)); echo "\r\n";
 switch(array_shift($elements)) {
     case 'image':
         $controller = new ImageController();
