@@ -22,7 +22,7 @@ switch(array_shift($elements)) {
     default:
         break;
 }
-echo "controller: " print_r($controller); echo "\r\n";
+echo "controller: "; print_r($controller); echo "\r\n";
 
 $action = array_shift($elements);
 $params = $elements;
