@@ -52,7 +52,13 @@ $user = new User();
                                 <input hidden="true" name="search" type="text" value=<?php echo $video->data()->category ?> >
                                 <input style="background-color: white; border-width: 0px; color: #0000EE;" type="submit" value=<?php echo $video->data()->category ?> >
                             </form><br>
-                            <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Tags</span></h3><br>
+                            <!-- Tags -->
+                            <h3 style="text-decoration: underline; color: #D5AD92; margin-bottom: 15px;"><span style="color: black;">Tags</span></h3>
+                            <p style="color: black; margin-top: 5px; margin-bottom: 15px;">
+                            <?php $tags = preg_split('[, ]',$video->data()->tags); 
+                            foreach($tags as $tag)
+                                echo '<a style="margin-top: 4px; color: #0000EE;" href=video/tag/'.$tag.' >'.$tag.'</a>  ';  ?>
+                                        </p>
                             <p style="margin-top: 5px;"><?php echo $video->data()->tags; ?></p><br>
                             <div class="row">
                                 <div class="col-sm-6 col-sm-offset-4">

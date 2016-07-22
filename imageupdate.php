@@ -77,7 +77,7 @@ if (Input::exist()) {
     <?php
     $elements = explode('/', $_SERVER['REQUEST_URI']);
     $user = $elements[1];
-    echo "<BASE href=\"/$user/\">";
+    echo "<BASE href=\"/\">";
     ?>
     
     <!-- CSS, Meta, Ajax, etc. -->
