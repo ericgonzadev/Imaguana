@@ -4,12 +4,9 @@ include_once 'controller/UserController.php';
 include_once 'controller/VideoController.php';
 
 $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
-echo "path: ". $path. "\r\n";;
-$elements = explode('/', $path);                // Split path on slashes
-echo "elements: "; print_r($elements);  echo "\r\n";
-$content = array_shift($elements);
-echo "array_shift($elements): "; print_r($content); echo "\r\n";
-switch($content) {
+$elements = explode('/', $path);                // Split path on slashes to an array
+$type = array_shift($elements); //Cut array[0]
+switch($type) {
     case 'image':
         $controller = new ImageController();
         break;
@@ -22,7 +19,6 @@ switch($content) {
     default:
         break;
 }
-echo "controller: "; print_r($controller); echo "\r\n";
 
 $action = array_shift($elements);
 $params = $elements;
