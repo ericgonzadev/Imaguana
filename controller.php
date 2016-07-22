@@ -24,7 +24,7 @@ $controller = new UserController();
 $action = array_shift($elements);
 $params = $elements;
 
-$controller->profile(Twinpair);
+$controller->profile("Twinpair");
 
 
 ?>
