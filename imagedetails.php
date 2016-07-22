@@ -10,7 +10,7 @@ $user = new User;
     <?php
     $elements = explode('/', $_SERVER['REQUEST_URI']);
     $user = $elements[1];
-    echo "<BASE href=\"/$user/\">";
+    echo "<BASE href=\"/\">";
     ?>
     
     <!-- CSS, Meta, Ajax, etc. -->
@@ -81,7 +81,7 @@ $user = new User;
                             <!-- Tags -->
                             <h3 style="text-decoration: underline; color: #D5AD92; margin-bottom: 15px;"><span style="color: black;">Tags</span></h3>
                             <p style="color: black; margin-top: 5px; margin-bottom: 15px;">
-			    <?php $tags = split('[, ]',$image->data()->tags); 
+			    <?php $tags = explode('[, ]',$image->data()->tags); 
 			          foreach($tags as $tag)
 				  	echo '<a style="margin-top: 4px; color: #0000EE;" href=image/tag/'.$tag.' >'.$tag.'</a>  ';  ?>
                             </p>
