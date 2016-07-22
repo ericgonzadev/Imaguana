@@ -8,7 +8,6 @@ Class UserController {
     function profile($params) {
         $username = $params[0];
         //$image = Image::withID($id);
-        include_once("profile.php");
     }
 
     function browse() {
