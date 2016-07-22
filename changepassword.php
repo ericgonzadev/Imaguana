@@ -12,7 +12,6 @@ if (Input::exist()) {
         $validate = new Validate();
         $validation = $validate->check($_POST, array(
             'password_current' => array(
-                'min' => 4
             ),
             'password_new' => array(
                 'min' => 4
@@ -30,10 +29,12 @@ if (Input::exist()) {
                 $validations .= "Current password is incorrect";
             } else {
                 $salt = Hash::salt(32);
-                $user->update(array(
-                    'password' => Hash::make(Input::get('password_new'), $salt),
-                    'salt' => $salt
-                ));
+                $user->update(
+                        array(
+                            'password' => Hash::make(Input::get('password_new'), $salt),
+                            'salt' => $salt
+                            )
+                        );
 
                 Session::flash('home', 'Updated Password Successfully');
                 Redirect::to("user/profile/$link");
@@ -42,8 +43,6 @@ if (Input::exist()) {
         else {
             foreach ($validation->errors() as $error) {
                 $count++;
-            }
-            foreach ($validation->errors() as $error) {
                 $validations .= "- {$error} <br>";
             }
         }
@@ -75,7 +74,7 @@ if (Input::exist()) {
         <div class="row" style="text-align: center; align-content: center;">
             <?php
             if ($count != 0) {
-                echo "<p style='text-align: center; color: red;'>{$count} errors </p>";
+                echo "<p style='text-align: center; color: red;'>{$count} error(s) </p>";
                 echo "<p style='text-align: center; color: red;'>{$validations} </p>";
             }
             ?>
