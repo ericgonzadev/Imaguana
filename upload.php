@@ -109,7 +109,7 @@ if ($user->data()->group != 1) {
                     'print' => $print,
                     'unlimited' => $unlimited,
                     'image' => $image_path,
-		    'category' => $category,
+		            'category' => $category,
                     'tags' => $tags ));
             header("location:image/show/". $lastid);
         } 
