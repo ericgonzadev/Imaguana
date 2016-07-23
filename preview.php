@@ -80,18 +80,18 @@ $validations = "";
             list($width, $height) = getimagesize($filetmpname);
 
             //Store original image locally to resize it to small and medium
-            move_uploaded_file($filetmpname, "assets/img/backgrounds/" . $filename);
-            $image_path = "assets/img/backgrounds/" . $filename;
+            move_uploaded_file($filetmpname, "../preview" . $filename);
+            $image_path = "../preview" . $filename;
             }
         ?>
             
             <div class="col-sm-11" style="text-align: center; margin-top: -20px; margin-left: 24px;" >
                 <ul style="margin-bottom: 30px;">  
-                            <li class="ws-shop-cart" type='none'>
-                                <a href="preview.php" class="btn btn-sm">Upload another Background picture</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="image/show/<?php echo $image_id ?>" class="btn btn-sm " style="width: 340px;">Go back to the image details</a>
-                            </li>
-                        </ul>
+                    <li class="ws-shop-cart" type='none'>
+                        <a href="preview.php" class="btn btn-sm">Upload another Background picture</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="image/show/<?php echo $image_id ?>" class="btn btn-sm " style="width: 340px;">Go back to the image details</a>
+                    </li>
+                </ul>
             </div><br><br>
             <div class="container">
                 <!-- Top Navigation -->
