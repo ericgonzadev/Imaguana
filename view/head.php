@@ -1,5 +1,7 @@
 <?php
 
+echo "<BASE href=\"/\">";
+
 echo '
     <!-- Meta -->
     <meta charset="utf-8">
