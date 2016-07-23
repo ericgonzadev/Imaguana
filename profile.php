@@ -146,7 +146,6 @@ else {
             <!-- end edit form column -->
         </div>
     </div>
-    <br><br>
     <?php if ($data->group == 1) { ?>
         <div class="ws-works-title clearfix">
             <div class="col-sm-12">
@@ -154,7 +153,7 @@ else {
             </div>
         </div>
     <!-- Carousel -->
-    <div style="margin-top: -100px;" id="ws-items-carousel">
+    <div id="ws-items-carousel">
             <?php
             $output = "";
             $css = '<style type="text/css"> ';
