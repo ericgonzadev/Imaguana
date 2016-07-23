@@ -53,7 +53,7 @@ else {
             <!-- left column -->
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="text-center">
-                    <img height="210" width="350"src="assets/img/profile_pictures/<?php echo ($data->profile_picture_path == "") ? 'avatar.jpg' : $data->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
+                    <img height="160" width="300"src="assets/img/profile_pictures/<?php echo ($data->profile_picture_path == "") ? 'avatar.jpg' : $data->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
                 </div>
                 <ul style="list-style: none; ">
                     <?php if ($data->group == 1) { ?>
