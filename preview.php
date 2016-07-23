@@ -80,8 +80,8 @@ $validations = "";
             list($width, $height) = getimagesize($filetmpname);
 
             //Store original image locally to resize it to small and medium
-            move_uploaded_file($filetmpname, "../preview" . $filename);
-            $image_path = "../preview" . $filename;
+            move_uploaded_file($filetmpname, "preview/" . $filename);
+            $image_path = "preview/" . $filename;
             }
         ?>
             
