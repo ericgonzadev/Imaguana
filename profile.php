@@ -211,7 +211,7 @@ else {
     <?php }?>
 
     <!-- Foot Bar -->
-    <div style="margin-top: 100px;">
+    <div style="margin-top: 60px;">
         <?php include 'view/foot-bar.php'; ?>
     </div>
 
