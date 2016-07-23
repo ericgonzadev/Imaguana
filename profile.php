@@ -146,7 +146,7 @@ else {
             <!-- end edit form column -->
         </div>
     </div>
-    
+    <br><br><br>
     <?php if ($data->group == 1) { ?>
         <div class="ws-works-title clearfix">
             <div class="col-sm-12">
