@@ -165,7 +165,7 @@ else {
                                 .multiPic' . $row['id'] . '{ 
                                     width:330px; 
                                     height:240px;  
-                                    background: url(' . $row['image'] . ') no-repeat;
+                                    background: url(uploads/' . $row['image'] . ') no-repeat;
                                     background-size: 350px 240px;
                                 } 
                                 .multiPic' . $row['id'] . ' .text' . $row['id'] . '{ 

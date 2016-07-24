@@ -35,7 +35,7 @@ $user = new User;
             .multiPic{ 
                 width:670px; 
                 height:446px;  
-                background: url(' . $image->data()->image . ') no-repeat;
+                background: url(uploads/' . $image->data()->image . ') no-repeat;
                 background-size: 670px 446px;
             } 
             .multiPic .text1{ 
@@ -222,7 +222,7 @@ $user = new User;
                     .multiPic' . $img->id . '{ 
                         width:350px; 
                         height:240px;  
-                        background: url(' . $img->image . ') no-repeat;
+                        background: url(uploads/' . $img->image . ') no-repeat;
                         background-size: 350px 240px;
                     } 
                     .multiPic' . $img->id . ' .text' . $img->id . '{ 
