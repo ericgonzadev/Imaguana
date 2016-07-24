@@ -1,3 +1,0 @@
-export
-
-ln -s ${OPENSHIFT_DATA_DIR}uploads${OPENSHIFT_REPO_DIR}uploads
