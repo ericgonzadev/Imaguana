@@ -2,7 +2,7 @@
 require_once 'core/init.php';
 
 //Connection
-mysql_connect($OPENSHIFT_imag_DB_HOST, $OPENSHIFT_imag_DB_USERNAME, $OPENSHIFT_imag_DB_PASSWORD) or die(mysql_error());
+mysql_connect($OPENSHIFT_MYSQL_DB_HOST, $OPENSHIFT_MYSQL_DB_USERNAME, $OPENSHIFT_MYSQL_DB_PASSWORD) or die(mysql_error());
 mysql_select_db("imag") or die(mysql_error());
 
 $user = new User();
