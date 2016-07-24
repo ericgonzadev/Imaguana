@@ -3,7 +3,7 @@ require_once 'core/init.php';
 
 //Connection
 mysql_connect(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD')) or die(mysql_error());
-mysql_select_db("imag") or die(mysql_error());
+mysql_select_db(getenv('OPENSHIFT_GEAR_NAME')) or die(mysql_error());
 
 $user = new User();
 $imagelist = new Image();
@@ -18,8 +18,8 @@ $modal = "";
     <?php 
         include 'view/head.php'; 
         echo "<BASE href=\"/\">";
+        echo getenv('varname')
     ?>
-
 </head>
 
 <body>
