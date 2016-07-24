@@ -18,7 +18,7 @@ $modal = "";
     <?php 
         include 'view/head.php'; 
         echo "<BASE href=\"/\">";
-        echo getenv('varname')
+        echo getenv('OPENSHIFT_REPO_DIR');
     ?>
 </head>
 
