@@ -172,7 +172,7 @@ else{
                 if ($filename != "") {
                     try {
                         $user->update(array(
-                            'profile_picture_path' => $filename
+                            'profile_picture_path' => 'profile/'.$filename
                         ));
 
                         $filetmpname = $_FILES["image"]["tmp_name"];
