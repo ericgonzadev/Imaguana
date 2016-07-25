@@ -2,7 +2,7 @@
 require 'core/init.php';
     
 // Create connection
-include 'core/db_mysqli_connect.php';
+include_once 'core/db_mysqli_connect.php';
 
 $user = new User();
 

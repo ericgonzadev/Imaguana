@@ -2,13 +2,13 @@
 require 'core/init.php';
 
 //Connection
-include 'core/db_connection.php';
+include_once 'core/db_connection.php';
 
 $user = new User();
 
 if (Input::exist()) { 
     // Create connection
-    include 'core/db_mysqli_connect.php';
+    include_once 'core/db_mysqli_connect.php';
 
     // prepare and bind
     $stmt = $conn->prepare("Insert INTO messages (name, email, message) VALUES (?, ?, ?)");

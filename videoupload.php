@@ -15,7 +15,7 @@ $video = new Video();
 if(isset($_POST['submit'])){
     
     //Connection
-    include 'core/db_connection.php';
+    include_once 'core/db_connection.php';
 
     //Variables holding the image info
     $title = $_POST['title'];

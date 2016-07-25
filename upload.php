@@ -15,7 +15,7 @@ if ($user->data()->group != 1) {
     if (Input::exist()){
         
         //Connection
-        include 'core/db_connection.php';
+        include_once 'core/db_connection.php';
         
         //Variables holding the image info
         $filetmpname = $_FILES["image"]["tmp_name"];
