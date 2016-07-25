@@ -519,6 +519,30 @@ unset($_SESSION['notification']);
         </div>
     </section>
     <!-- End Contact Section --> 
+    <?php 
+    if (Input::exist()) { 
+        // Create connection
+        $conn = new mysqli(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'), getenv('OPENSHIFT_GEAR_NAME'));
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // set parameters and execute
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        
+        // prepare and bind
+        $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $message);
+        
+        $stmt->execute();
+        $stmt->close();
+        $conn->close();
+        $_SESSION['notification'] = "Thanks for your feedback!";
+        header("location: ./#contact");
+    }                  
+?>
 
     <!-- Footer Start -->
     <footer class="ws-footer" style="margin-top: -20px;">
