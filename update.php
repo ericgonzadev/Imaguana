@@ -208,7 +208,8 @@ else{
     <title>Imaguana | Edit Profile</title>
 
     <!-- CSS, Meta, Ajax, etc. -->
-    <?php include 'view/head.php' ?>
+    <?php include 'view/head.php' 
+    getenv('OPENSHIFT_DATA_DIR') . "/profile/[filename]";?>
     
     <!--Image preview -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
