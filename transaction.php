@@ -2,12 +2,8 @@
 require 'core/init.php';
     
 // Create connection
-$conn = new mysqli("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
+include 'core/db_mysqli_connect.php';
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-//user object
 $user = new User();
 
 if($_POST['type'] == "video"){

@@ -186,11 +186,11 @@ $user = new User();
             <?php
             $output = "";
             $css = '<style type="text/css"> ';
-            $rand = rand(5, 10);
-            $randend = $rand + 10;
-            $title_query = mysql_query("SELECT * "
+            // $rand = rand(5, 10);
+            //$randend = $rand + 10;
+            $title_query = mysql_query("Select *"
                     . "FROM images "
-                    . "WHERE id > $rand AND id < $randend");
+                    . "WHERE id > 5 AND id < 10");
             while ($row = mysql_fetch_array($title_query)) {
                 $css .= '
                                 .multiPic' . $row['id'] . '{ 
@@ -496,11 +496,10 @@ unset($_SESSION['notification']);
     <?php 
     if (Input::exist()) { 
         // Create connection
-        $conn = new mysqli("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
-        if ($conn->connect_error){ die("Connection failed: " . $conn->connect_error); }
+        include 'core/db_mysqli_connect.php';
 
         // prepare and bind
-        $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("Insert INTO messages (name, email, message) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $message);
 
         // set parameters and execute
@@ -513,6 +512,8 @@ unset($_SESSION['notification']);
         $conn->close();
 
         $_SESSION['notification'] = "Thanks for your feedback!";
+
+        header("location: ./#contact");
     }                  
     ?>
 

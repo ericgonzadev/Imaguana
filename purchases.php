@@ -2,11 +2,7 @@
 require 'core/init.php';
 
 // Create connection
-$conn = new mysqli("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR", "imag");
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'core/db_mysqli_connect.php';
 
 $user = new User();
 
