@@ -10,15 +10,15 @@ if (Input::exist()) {
     // Create connection
     include_once 'core/db_mysqli_connect.php';
 
-    // prepare and bind
-    $stmt = $conn->prepare("Insert INTO messages (name, email, message) VALUES (?, ?, ?)");
-    var_dump($stmt);
-    $stmt->bind_param("sss", $name, $email, $message);
-
-    // set parameters and execute
+    // set parameters
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
+
+    // prepare and bind
+    $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+    var_dump($stmt);
+    $stmt->bind_param("sss", $name, $email, $message);
 
     $stmt->execute();
     $stmt->close();
