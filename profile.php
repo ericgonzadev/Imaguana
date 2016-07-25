@@ -2,7 +2,7 @@
 require_once 'core/init.php';
 
 //Connection
-include 'core/db_connection.php'
+include 'core/db_connection.php';
 
 $elements = explode('/', $_SERVER['REQUEST_URI']);
 $account = $elements[1];

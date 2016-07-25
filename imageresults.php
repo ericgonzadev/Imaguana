@@ -2,7 +2,7 @@
 require_once 'core/init.php';
 
 //Connection
-include 'core/db_connection.php'
+include 'core/db_connection.php';
 
 $user = new User();
 $imagelist = new Image();

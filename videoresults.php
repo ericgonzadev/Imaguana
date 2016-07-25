@@ -2,7 +2,7 @@
 require 'core/init.php';
 
 //Connection
-include 'core/db_connection.php'
+include 'core/db_connection.php';
 
 $user = new User();
 $videolist = new Video();
