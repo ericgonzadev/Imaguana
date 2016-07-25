@@ -77,7 +77,7 @@ if($user->data()->group == 3){
                 if ($filename != "") {
                     try {
                         $u->update(array(
-                            'profile_picture_path' => $filename
+                            'profile_picture_path' => 'profile/profile/' . $filename
                         ));
 
                         $filetmpname = $_FILES["image"]["tmp_name"];
@@ -88,7 +88,7 @@ if($user->data()->group == 3){
                         list($width, $height) = getimagesize($filetmpname);
 
                         //Store original image locally
-                        $image_path = "assets/img/profile_pictures/" . $filename;
+                        $image_path = getenv('OPENSHIFT_DATA_DIR') . "/profile/" . $filename;
                         move_uploaded_file($filetmpname, $image_path);
                     } catch (Exception $e) {
                         die($e->getMessage());
