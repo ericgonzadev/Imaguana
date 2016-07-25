@@ -1,5 +1,5 @@
 ln -sf ${OPENSHIFT_DATA_DIR}uploads ${OPENSHIFT_REPO_DIR}uploads
 
-ln -sf ${OPENSHIFT_DATA_DIR}profile${OPENSHIFT_REPO_DIR}profile
+ln -sf ${OPENSHIFT_DATA_DIR}profile${OPENSHIFT_REPO_DIR}profile 
 
 ln -sf ${OPENSHIFT_DATA_DIR}preview${OPENSHIFT_REPO_DIR}preview
