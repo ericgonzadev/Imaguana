@@ -6,6 +6,28 @@ include 'core/db_connection.php';
 
 $user = new User();
 
+if (Input::exist()) { 
+    // Create connection
+    include 'core/db_mysqli_connect.php';
+
+    // prepare and bind
+    $stmt = $conn->prepare("Insert INTO messages (name, email, message) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $message);
+
+    // set parameters and execute
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+
+    $_SESSION['notification'] = "Thanks for your feedback!";
+
+    header("location: ./#contact");
+}  
+
 ?>
 
 <!doctype html>
@@ -190,13 +212,13 @@ $user = new User();
             //$randend = $rand + 10;
             $title_query = mysql_query("Select *"
                     . "FROM images "
-                    . "WHERE id > 5 AND id < 10");
+                    . "WHERE id > 4 AND id < 10");
             while ($row = mysql_fetch_array($title_query)) {
                 $css .= '
                                 .multiPic' . $row['id'] . '{ 
                                     width:330px; 
                                     height:240px;  
-                                    background: url(' . $row['image'] . ') no-repeat;
+                                    background: url(uploads/' . $row['image'] . ') no-repeat;
                                     background-size: 350px 240px;
                                 } 
                                 .multiPic' . $row['id'] . ' .text' . $row['id'] . '{ 
@@ -493,29 +515,6 @@ unset($_SESSION['notification']);
         </div>
     </section>
     <!-- End Contact Section --> 
-    <?php 
-    if (Input::exist()) { 
-        // Create connection
-        include 'core/db_mysqli_connect.php';
-
-        // prepare and bind
-        $stmt = $conn->prepare("Insert INTO messages (name, email, message) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $name, $email, $message);
-
-        // set parameters and execute
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-
-        $stmt->execute();
-        $stmt->close();
-        $conn->close();
-
-        $_SESSION['notification'] = "Thanks for your feedback!";
-
-        header("location: ./#contact");
-    }                  
-    ?>
 
     <!-- Footer Start -->
     <footer class="ws-footer" style="margin-top: -20px;">
