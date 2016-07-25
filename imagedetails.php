@@ -55,7 +55,7 @@ $user = new User;
                     </div>
                     
                     <form action="preview.php" method="POST">
-                    <?php $_SESSION['previewimage'] = 'uploads/uploads' . $image->data()->image; ?>
+                    <?php $_SESSION['previewimage'] = 'uploads/' . $image->data()->image; ?>
                     <?php $_SESSION['imageid'] = $image->data()->id; ?>
                     <input style="margin-top: -10px;" class="btn ws-btn-fullwidth" type="submit" value="Preview this image with a background" name="preview" >
                     </form>
