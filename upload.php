@@ -13,9 +13,9 @@ if ($user->data()->group != 1) {
 
     $image = new Image();
     if (Input::exist()){
+        
         //Connection
-        mysql_connect("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
-        mysql_select_db("imag") or die(mysql_error());
+        include 'core/db_connection.php'
         
         //Variables holding the image info
         $filetmpname = $_FILES["image"]["tmp_name"];

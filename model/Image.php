@@ -1,6 +1,6 @@
 <?php
 
-include_once 'db.php';
+include 'core/db_connection.php'
 
 Class Image {
 

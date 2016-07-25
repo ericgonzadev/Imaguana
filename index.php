@@ -2,8 +2,7 @@
 require 'core/init.php';
 
 //Connection
-mysql_connect("127.13.13.2", "admin67KSwkr", "c6hsZzfY7pGR") or die(mysql_error());
-mysql_select_db("imag") or die(mysql_error());
+include 'core/db_connection.php'
 
 $user = new User();
 
@@ -154,14 +153,11 @@ $user = new User();
                      </form>
 
                      <script type="text/javascript">
-                            function OnSubmitForm()
-                            {
-                              if(document.myform.filter[0].selected == true)
-                              {
+                            function OnSubmitForm(){
+                              if(document.myform.filter[0].selected == true){
                                 document.myform.action ="imageresults.php";
                               }
-                              else if(document.myform.filter[1].selected == true)
-                              {
+                              else if(document.myform.filter[1].selected == true){
                                 document.myform.action ="videoresults.php";
                               }
                               return true;
@@ -190,7 +186,7 @@ $user = new User();
             <?php
             $output = "";
             $css = '<style type="text/css"> ';
-            $rand = rand(12, 24);
+            $rand = rand(5, 10);
             $randend = $rand + 10;
             $title_query = mysql_query("SELECT * "
                     . "FROM images "
