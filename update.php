@@ -77,7 +77,7 @@ if($user->data()->group == 3){
                 if ($filename != "") {
                     try {
                         $u->update(array(
-                            'profile_picture_path' => 'profile/profile/' . $filename
+                            'profile_picture_path' => 'profile/' . $filename
                         ));
 
                         $filetmpname = $_FILES["image"]["tmp_name"];
@@ -208,8 +208,8 @@ else{
     <title>Imaguana | Edit Profile</title>
 
     <!-- CSS, Meta, Ajax, etc. -->
-    <?php include 'view/head.php' 
-    getenv('OPENSHIFT_DATA_DIR') . "/profile/[filename]";?>
+    <?php include 'view/head.php';
+    echo getenv('OPENSHIFT_DATA_DIR') . "/profile/[filename]";?>
     
     <!--Image preview -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
