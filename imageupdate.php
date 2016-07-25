@@ -106,7 +106,7 @@ if (Input::exist()) {
                     <div class="col-sm-5">
                         <div id="ws-products-carousel" class="owl-carousel">
                             <div class="item">
-                                <img src="<?php echo $image->data()->image; ?>" class="img-responsive" alt="Alternative Text" height="700">
+                                <img src="uploads/<?php echo $image->data()->image; ?>" class="img-responsive" alt="Alternative Text" height="700">
                             </div>
                         </div>
 <!--                        <div class="col-sm-11">
