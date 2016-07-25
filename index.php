@@ -12,6 +12,7 @@ if (Input::exist()) {
 
     // prepare and bind
     $stmt = $conn->prepare("Insert INTO messages (name, email, message) VALUES (?, ?, ?)");
+    var_dump($stmt);
     $stmt->bind_param("sss", $name, $email, $message);
 
     // set parameters and execute
