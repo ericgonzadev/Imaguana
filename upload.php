@@ -29,6 +29,7 @@ if ($user->data()->group != 1) {
         $tags = $_POST['tags'];
         $user_id = $_POST['user_id'];
         $username = $_POST['username'];
+        $user = $_POST['user'];
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         
         $validate = new Validate();
@@ -71,7 +72,7 @@ if ($user->data()->group != 1) {
             list($width, $height) = getimagesize($filetmpname);
             
             //Store original image locally
-            $image_path = getenv('OPENSHIFT_DATA_DIR'). "/uploads/" . $filename;
+            $image_path = getenv('OPENSHIFT_DATA_DIR'). "/uploads" . $filename;
             move_uploaded_file($filetmpname, $image_path);
             if($width < 900){
             }
@@ -101,6 +102,7 @@ if ($user->data()->group != 1) {
             $lastid = $image->create( array(
                     'id' => '', 
                     'user_id' => $user_id,
+                    'user' => $user,
                     'username' => $username,
                     'name' => $image_name,
                     'title' => $title,
@@ -108,7 +110,7 @@ if ($user->data()->group != 1) {
                     'web' => $web,
                     'print' => $print,
                     'unlimited' => $unlimited,
-                    'image' => "uploads/" . $filename,
+                    'image' => "uploads/uploads/" . $filename,
 		            'category' => $category,
                     'tags' => $tags ));
             header("location:image/show/". $lastid);
@@ -281,6 +283,7 @@ if ($user->data()->group != 1) {
                                 </div>
                                 <input type="hidden" name="user_id" id="user_id" value=" <?php echo $user->data()->id; ?>">
                                 <input type="hidden" name="username" id="username" value=" <?php echo $user->data()->username; ?>">
+                                <input type="hidden" name="user" id="user" value=" <?php echo $user->data()->name; ?>">
                             </div>
 
                         </div>

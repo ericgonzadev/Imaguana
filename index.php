@@ -8,10 +8,7 @@ $user = new User();
 
 if (Input::exist()) { 
     // Create connection
-    $conn = new mysqli(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'), getenv('OPENSHIFT_GEAR_NAME'));
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include_once 'core/db_mysqli_connect.php';
 
     // set parameters
     $name = $_POST['name'];
@@ -222,7 +219,7 @@ if (Input::exist()) {
                                 .multiPic' . $row['id'] . '{ 
                                     width:330px; 
                                     height:240px;  
-                                    background: url(uploads/' . $row['image'] . ') no-repeat;
+                                    background: url(' . $row['image'] . ') no-repeat;
                                     background-size: 350px 240px;
                                 } 
                                 .multiPic' . $row['id'] . ' .text' . $row['id'] . '{ 
@@ -522,16 +519,13 @@ unset($_SESSION['notification']);
     <?php 
     if (Input::exist()) { 
         // Create connection
-        $conn = new mysqli(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'), getenv('OPENSHIFT_GEAR_NAME'));
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include_once 'core/db_mysqli_connect.php';
 
         // set parameters and execute
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
-        
+
         // prepare and bind
         $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $message);

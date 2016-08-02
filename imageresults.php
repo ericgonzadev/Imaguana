@@ -142,7 +142,7 @@ $modal = "";
                                 .multiPic' . $image->id . '{ 
                                     width:350px; 
                                     height:240px;  
-                                    background: url(uploads/'. $image->image . ') no-repeat;
+                                    background: url('. $image->image . ') no-repeat;
                                     background-size: 350px 240px;
                                 } 
                                 .multiPic' . $image->id . ' .text' . $image->id . '{ 
@@ -407,7 +407,7 @@ $modal = "";
                 .multiPic' . $image->id . '{ 
                     width:350px; 
                     height:240px;  
-                    background: url(uploads/' . $image->image . ') no-repeat;
+                    background: url(' . $image->image . ') no-repeat;
                     background-size: 350px 240px;
                 } 
                 .multiPic' . $image->id . ' .text' . $image->id . '{ 

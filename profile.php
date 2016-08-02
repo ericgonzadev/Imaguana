@@ -52,7 +52,8 @@ else {
             <!-- left column -->
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="text-center">
-                    <img height="160" width="300"src="profile/<?php echo ($data->profile_picture_path == "") ? 'avatar.jpg' : $data->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
+                    <img height="160" width="300"src="<?php echo ($data->profile_picture_path == "") ? 'assets/img/profile_pictures/avatar.jpg' : $data->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar">
+                    <br><br>
                 </div>
                 <ul style="list-style: none; ">
                     <?php if ($data->group == 1) { ?>
@@ -164,7 +165,7 @@ else {
                                 .multiPic' . $row['id'] . '{ 
                                     width:330px; 
                                     height:240px;  
-                                    background: url(uploads/' . $row['image'] . ') no-repeat;
+                                    background: url(' . $row['image'] . ') no-repeat;
                                     background-size: 350px 240px;
                                 } 
                                 .multiPic' . $row['id'] . ' .text' . $row['id'] . '{ 

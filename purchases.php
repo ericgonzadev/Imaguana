@@ -53,113 +53,116 @@ $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->da
                     if ($row["license"] == "web") {
                         $license = 'Web: $' . $image->data()->web;
                         $button = "
-                                <a href='#ws-buy-modal" . $image->data()->id . "' data-toggle='modal' ><span class='ws-shop-cart'>
-                                    <input style='margin-right: 5px; height: 41px;' type='submit' class='btn btn-lg' value='Source Code'></span>
-                                </a>";
+                        <a href='#ws-buy-modal" . $image->data()->id . "' data-toggle='modal' ><span class='ws-shop-cart'>
+                            <input style='margin-right: 5px; height: 41px;' type='submit' class='btn btn-lg' value='Source Code'></span>
+                        </a>";
 
-                        $modal .= '  <!-- Register Buy Modal -->
-        <div class="modal fade" id="ws-buy-modal' . $image->data()->id . '" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header" style="border: none;">
-                        <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-                    </div>
-                    <div class="row" >
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <div class="modal-body" style="text-align: center;">                                    
-                                <!-- Register Form -->                                        
-                                <h3 style="text-align: center; color:black;">Thank you for your purchase!</h3>
-                                <div class="ws-separator"></div>
-                                <h4 style="color:black; text-align: center;">Copy and Paste this source code onto your site:</h4><br>
-                                <br>
-                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;http://http://imag-uana.rhcloud.com/uploads' . $image->data()->image . '&quot; >" readonly name="source"><br>
-                                <div class="form-group">
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label"></label>
-                                        <div class="col-md-8" style="margin-left: -50px">
-                                            <ul style="list-style: none;">
-                                                <li class="ws-shop-cart" style="display:inline;">
-                                                <button class="btn btn-sm data-clipboard-action="copy" data-clipboard-target="#foo' . $image->data()->id . '">Copy</button>
-                                                <li class="ws-shop-cart" style="display:inline;">
-                                                <a data-dismiss="modal" aria-label="Close" class="btn btn-sm">Cancel</a>
-                                            </ul>
+                        $modal .='
+                        <!-- Register Buy Modal -->
+                        <div class="modal fade" id="ws-buy-modal' . $image->data()->id . '" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="border: none;">
+                                        <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                                    </div>
+                                    <div class="row" >
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="modal-body" style="text-align: center;">                                    
+                                                <!-- Register Form -->                                        
+                                                <h3 style="text-align: center; color:black;">Thank you for your purchase!</h3>
+                                                <div class="ws-separator"></div>
+                                                <h4 style="color:black; text-align: center;">Copy and Paste this source code onto your site:</h4><br>
+                                                <br>
+                                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;http://http://imag-uana.rhcloud.com/' . $image->data()->image . '&quot; >" readonly name="source"><br>
+                                                <div class="form-group">
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label"></label>
+                                                        <div class="col-md-8" style="margin-left: -50px">
+                                                            <ul style="list-style: none;">
+                                                                <li class="ws-shop-cart" style="display:inline;">
+                                                                <button class="btn btn-sm data-clipboard-action="copy" data-clipboard-target="#foo' . $image->data()->id . '">Copy</button>
+                                                                <li class="ws-shop-cart" style="display:inline;">
+                                                                <a data-dismiss="modal" aria-label="Close" class="btn btn-sm">Cancel</a>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>';
-                    } else if ($row["license"] == "print") {
+                        </div>';
+                    } 
+                    else if ($row["license"] == "print") {
                         $license = 'Print: $' . $image->data()->print;
                         $button = '
-                                <!-- buttons -->
-                                <div class="row" style="margin-top: 15px; margin-left: -50px;">
-                                    <div class="col-sm-12">
-                                        <form action="download.php" method="POST">
-                                            <input name="image" hidden="true" value="' . $image->data()->name . '" >
-                                            <span class="ws-shop-cart">
-                                                <input class="btn btn-lg" type="submit" style="margin-left: 63px; height: 41px;" value="Download">
-                                            </span>  
-                                        </form>
+                        <!-- buttons -->
+                        <div class="row" style="margin-top: 15px; margin-left: -50px;">
+                            <div class="col-sm-12">
+                                <form action="download.php" method="POST">
+                                    <input name="image" hidden="true" value="' . $image->data()->name . '" >
+                                    <span class="ws-shop-cart">
+                                        <input class="btn btn-lg" type="submit" style="margin-left: 63px; height: 41px;" value="Download">
+                                    </span>  
+                                </form>
 
-                                    </div>
-                                </div>';
-                    } else {
+                            </div>
+                        </div>';
+                    } 
+                    else {
                         $license = 'Unlimited: $' . $image->data()->unlimited;
                         $button = '
-                                <!-- buttons -->
-                                <div class="row" style="margin-top: 15px; margin-left: -50px;">
-                                    <div class="col-sm-12">
-                                        <form action="download.php" method="POST">
-                                            <input name="image" hidden="true" value="' . $image->data()->name . '" >
-                                            <span class="ws-shop-cart">
-                                                <input class="btn btn-lg" type="submit" style="margin-left: 63px; height: 41px;" value="Download">
-                                            </span>&nbsp; &nbsp;  
-                                            <a href="#ws-buy-modal' . $image->data()->id . '" data-toggle="modal" ><span class="ws-shop-cart">
-                                    <input style="margin-right: 5px; height: 41px;" type="submit" class="btn btn-lg" value="Source Code"></span>
-                                </a>
-                                        </form>
-                                    </div>
-                                </div>';
+                        <!-- buttons -->
+                        <div class="row" style="margin-top: 15px; margin-left: -50px;">
+                            <div class="col-sm-12">
+                                <form action="download.php" method="POST">
+                                    <input name="image" hidden="true" value="' . $image->data()->name . '" >
+                                    <span class="ws-shop-cart">
+                                        <input class="btn btn-lg" type="submit" style="margin-left: 63px; height: 41px;" value="Download">
+                                    </span>&nbsp; &nbsp;  
+                                    <a href="#ws-buy-modal' . $image->data()->id . '" data-toggle="modal" ><span class="ws-shop-cart">
+                            <input style="margin-right: 5px; height: 41px;" type="submit" class="btn btn-lg" value="Source Code"></span>
+                        </a>
+                                </form>
+                            </div>
+                        </div>';
 
                         $modal .= '  <!-- Register Buy Modal -->
-        <div class="modal fade" id="ws-buy-modal' . $image->data()->id . '" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header" style="border: none;">
-                        <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-                    </div>
-                    <div class="row" >
-                        <div class="col-sm-10 col-sm-offset-1">
-                            <div class="modal-body" style="text-align: center;">                                    
-                                <!-- Register Form -->                                        
-                                <h3 style="text-align: center; color:black;">Thank you for your purchase!</h3>
-                                <div class="ws-separator"></div>
-                                <h4 style="color:black; text-align: center;">Copy and Paste this source code onto your site:</h4><br>
-                                <br>
-                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;http://imag-uana.rhcloud.com/uploads' . $image->data()->image . '&quot; >" readonly name="source"><br>
-                                <div class="form-group">
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label"></label>
-                                        <div class="col-md-8" style="margin-left: -50px">
-                                            <ul style="list-style: none;">
-                                                <li class="ws-shop-cart" style="display:inline;">
-                                                <button class="btn btn-sm data-clipboard-action="copy" data-clipboard-target="#foo' . $image->data()->id . '">Copy</button>
-                                                <li class="ws-shop-cart" style="display:inline;">
-                                                <a data-dismiss="modal" aria-label="Close" class="btn btn-sm">Cancel</a>
-                                            </ul>
+                        <div class="modal fade" id="ws-buy-modal' . $image->data()->id . '" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="border: none;">
+                                        <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                                    </div>
+                                    <div class="row" >
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="modal-body" style="text-align: center;">                                    
+                                                <!-- Register Form -->                                        
+                                                <h3 style="text-align: center; color:black;">Thank you for your purchase!</h3>
+                                                <div class="ws-separator"></div>
+                                                <h4 style="color:black; text-align: center;">Copy and Paste this source code onto your site:</h4><br>
+                                                <br>
+                                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;http://imag-uana.rhcloud.com/' . $image->data()->image . '&quot; >" readonly name="source"><br>
+                                                <div class="form-group">
+                                                    <div class="form-group">
+                                                        <label class="col-md-3 control-label"></label>
+                                                        <div class="col-md-8" style="margin-left: -50px">
+                                                            <ul style="list-style: none;">
+                                                                <li class="ws-shop-cart" style="display:inline;">
+                                                                <button class="btn btn-sm data-clipboard-action="copy" data-clipboard-target="#foo' . $image->data()->id . '">Copy</button>
+                                                                <li class="ws-shop-cart" style="display:inline;">
+                                                                <a data-dismiss="modal" aria-label="Close" class="btn btn-sm">Cancel</a>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>';
+                        </div>';
                     }
                     $output .= '
                         <!-- contents -->

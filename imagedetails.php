@@ -35,7 +35,7 @@ $user = new User;
             .multiPic{ 
                 width:670px; 
                 height:446px;  
-                background: url(uploads/' . $image->data()->image . ') no-repeat;
+                background: url(' . $image->data()->image . ') no-repeat;
                 background-size: 670px 446px;
             } 
             .multiPic .text1{ 
@@ -55,7 +55,7 @@ $user = new User;
                     </div>
                     
                     <form action="preview.php" method="POST">
-                    <?php $_SESSION['previewimage'] = 'uploads/' . $image->data()->image; ?>
+                    <?php $_SESSION['previewimage'] = '' . $image->data()->image; ?>
                     <?php $_SESSION['imageid'] = $image->data()->id; ?>
                     <input style="margin-top: -10px;" class="btn ws-btn-fullwidth" type="submit" value="Preview this image with a background" name="preview" >
                     </form>
@@ -71,7 +71,7 @@ $user = new User;
                         <div class="ws-product-details">
                             <!-- Author -->
                             <h3 style="text-decoration: underline; color: #D5AD92; margin-top: 20px; margin-bottom: 18px;"><span style="color: black;">Artist</span></h3>
-                            <p style="margin-bottom: 15px;"><a style="margin-top: 4px; color: #0000EE;" href="<?php echo str_replace(' ', '', rawurldecode("user/profile/" . $image->data()->username)); ?>" ><?php echo $image->data()->username; ?></a></p>
+                            <p style="margin-bottom: 15px;"><a style="margin-top: 4px; color: #0000EE;" href="<?php echo str_replace(' ', '', rawurldecode("user/profile/" . $image->data()->username)); ?>" ><?php echo $image->data()->user . "&nbsp(" . $image->data()->username . ")"; ?></a></p>
                             <!-- Description -->
                             <h3 style="text-decoration: underline; color: #D5AD92; margin-bottom: 15px;"><span style="color: black;">Description</span></h3>
                             <p style="color: black; margin-top: 5px; margin-bottom: 15px;"><?php echo $image->data()->description; ?></p>
@@ -83,7 +83,7 @@ $user = new User;
                             <p style="color: black; margin-top: 5px; margin-bottom: 15px;">
 			    <?php $tags = preg_split('[, ]',$image->data()->tags); 
 			          foreach($tags as $tag)
-				  	echo '<a style="margin-top: 4px; color: #0000EE;" href=image/tag/'.$tag.' >'.$tag.'</a>  ';  ?>
+				  	echo '<a style="margin-top: 4px; color: #0000EE;" href=image/tag/'.$tag.' >'.$tag.',&nbsp</a>  ';  ?>
                             </p>
                             <div class="row">
                                 <div class="col-sm-6 col-sm-offset-4">
@@ -222,7 +222,7 @@ $user = new User;
                     .multiPic' . $img->id . '{ 
                         width:350px; 
                         height:240px;  
-                        background: url(uploads/' . $img->image . ') no-repeat;
+                        background: url(' . $img->image . ') no-repeat;
                         background-size: 350px 240px;
                     } 
                     .multiPic' . $img->id . ' .text' . $img->id . '{ 

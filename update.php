@@ -77,7 +77,7 @@ if($user->data()->group == 3){
                 if ($filename != "") {
                     try {
                         $u->update(array(
-                            'profile_picture_path' => 'profile/' . $filename
+                            'profile_picture_path' => 'profile/profile/' . $filename
                         ));
 
                         $filetmpname = $_FILES["image"]["tmp_name"];
@@ -172,7 +172,7 @@ else{
                 if ($filename != "") {
                     try {
                         $user->update(array(
-                            'profile_picture_path' => 'profile/'.$filename
+                            'profile_picture_path' => 'profile/profile/'.$filename
                         ));
 
                         $filetmpname = $_FILES["image"]["tmp_name"];
