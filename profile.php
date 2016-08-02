@@ -113,9 +113,9 @@ else {
                         <div class="col-md-8" style="padding-top: 8px; color:black;">
                             <p1><?php 
                                 if ($data->bio == ""){
-                                echo ($user->isLoggedIn() && strtolower($user->data()->username) == strtolower($username)) ? 'Update your bio by clicking on the edit profile button below your profile picture' : $data->bio 
+                                echo ($user->isLoggedIn() && strtolower($user->data()->username) == strtolower($username)) ? 'Update your bio by clicking on the edit profile button below your profile picture' : $data->bio; 
                                 }
-                                else{ echo $data->bio} ?>
+                                else{ echo $data->bio;} ?>
                             </p1>
                         </div>
                     </div><br>
