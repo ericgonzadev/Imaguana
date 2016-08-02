@@ -82,9 +82,12 @@ $navbar = '
                         $navbar .= '<li class="dropdown">
                             <a href="user/profile/' . $user->data()->username .'" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">My Account<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="upload.php">Upload an image</a></li>
-                                <li><a href="videoupload.php">Upload a video</a></li>
-                                <li><a href="purchases.php">View purchases</a></li>
+                                <li><a href="upload.php">Upload an image</a></li>'
+                            if ($user->data()->group != 2){
+                                $navbar .= '<li><a href="upload.php">Upload an image</a></li>
+                                <li><a href="videoupload.php">Upload a video</a></li>';
+                            } 
+                            $navbar .= '<li><a href="purchases.php">View purchases</a></li>
                             </ul>
                         </li>';
                     }   
