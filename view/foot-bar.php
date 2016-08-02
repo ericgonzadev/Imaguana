@@ -30,10 +30,9 @@
                     <h3>Connect with us!</h3>
                     <div class="ws-footer-separator"></div>
                     <ul class="ws-footer-social">
-                        <li><a href="./#team">Out Team</a></li>
+                        <li><a href="./#team"><i class="fa fa-users"></i>Our Team</a></li>
                         <li><a href="https://www.facebook.com/Imaguana" target="blank"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></li>
                         <li><a href="https://twitter.com/imaguana648" target="blank"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
-                        <li><a href="#"><i class="fa fa-instagram fa-lg"></i>Instagram</a></li>
                     </ul>
                 </div>
 
