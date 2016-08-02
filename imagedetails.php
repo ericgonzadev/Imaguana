@@ -71,7 +71,7 @@ $user = new User;
                         <div class="ws-product-details">
                             <!-- Author -->
                             <h3 style="text-decoration: underline; color: #D5AD92; margin-top: 20px; margin-bottom: 18px;"><span style="color: black;">Artist</span></h3>
-                            <p style="margin-bottom: 15px;"><a style="margin-top: 4px; color: #0000EE;" href="<?php echo str_replace(' ', '', rawurldecode("user/profile/" . $image->data()->username)); ?>" ><?php echo $image->data()->user . "&nbsp(" . $image->data()->username . ")"; ?></a></p>
+                            <p style="margin-bottom: 15px;"><a style="margin-top: 4px; color: #0000EE;" href="<?php echo str_replace(' ', '', rawurldecode("user/profile/" . $image->data()->username)); ?>" ><?php echo $image->data()->user . "&nbsp&nbsp (" . $image->data()->username . ")"; ?></a></p>
                             <!-- Description -->
                             <h3 style="text-decoration: underline; color: #D5AD92; margin-bottom: 15px;"><span style="color: black;">Description</span></h3>
                             <p style="color: black; margin-top: 5px; margin-bottom: 15px;"><?php echo $image->data()->description; ?></p>

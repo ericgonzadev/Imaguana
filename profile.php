@@ -44,7 +44,7 @@ else {
             <br>
             <div class="col-sm-12">
                 <h3 style="font-size: 25px"><?php if ($data->group == 1) { ?>Artist Profile: <?php } else if($data->group == 2) { ?>
-                        Customer Profile: <?php }  echo $data->username; ?></h3>
+                        Customer Profile: <?php }  echo $data->name; ?></h3>
                 <div class="ws-separator"></div> 
             </div>
         </div> 
@@ -59,8 +59,13 @@ else {
                     <?php if ($data->group == 1) { ?>
                         <li class="ws-shop-cart">
                             <form action="imageresults.php" method="POST">
+                            <?php if ($user->isLoggedIn() && strtolower($user->data()->username) == strtolower($username) ) { ?>
+                                <input class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;" type="submit" value="BROWSE YOUR WORK" name="submit">
+                                <input type="hidden" name="search" id="search" value="<?php echo $data->username; ?>"> </form>
+                            <?php } else{ ?>
                                 <input class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;" type="submit" value="BROWSE THIS ARTIST'S WORK" name="submit">
                                 <input type="hidden" name="search" id="search" value="<?php echo $data->username; ?>"> </form>
+                            <?php } ?>
                         </li>
                     <?php } else if($data->group == 3){ ?>
                         <li class="ws-shop-cart">
@@ -92,12 +97,6 @@ else {
             <div style="font-size: 17px;" class="col-md-8 col-sm-6 col-xs-12 personal-info">
                 <form class="form-horizontal" role="form" method="POST" action="update.php">
                     <div class="form-group">
-                        <label class="col-lg-3 control-label" style="margin-bottom: 23px; color:black;"><b>Name:</b></label>
-                        <div class="col-md-8" style="padding-top: 8px; color:black; ">
-                            <p1><?php echo $data->name; ?></p1>
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <label class="col-lg-3 control-label" style="margin-bottom: 23px; color:black;"><b>Username:</b></label>
                         <div class="col-md-8" style="padding-top: 8px; color:black;">
                             <p1><?php echo $data->username; ?></p1>
@@ -112,7 +111,12 @@ else {
                     <div class="form-group">
                         <label class="col-md-3 control-label" style="margin-bottom: 23px; color:black; "><b>Bio:</b></label>
                         <div class="col-md-8" style="padding-top: 8px; color:black;">
-                            <p1><?php echo ($data->bio == "") ? 'Update your bio by clicking on the edit profile button below your profile picture' : $data->bio ?></p1>
+                            <p1><?php 
+                                if ($data->bio == ""){
+                                echo ($user->isLoggedIn() && strtolower($user->data()->username) == strtolower($username)) ? 'Update your bio by clicking on the edit profile button below your profile picture' : $data->bio 
+                                }
+                                else{ echo $data->bio} ?>
+                            </p1>
                         </div>
                     </div><br>
                     <div class="form-group" style="margin-top: -20px;">
