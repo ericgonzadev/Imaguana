@@ -37,7 +37,7 @@ if($_POST['type'] == "video"){
         header("location: ./purchases.php#video_" . $video->data()->id);
     }
 }
-else{
+else{   
     //image object
     $image = new Image();
     $image->find($_POST['imageid']);       
