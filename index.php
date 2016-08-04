@@ -4,30 +4,7 @@ require 'core/init.php';
 //Connection
 include_once 'core/db_connection.php';
 
-$user = new User();
-
-if (Input::exist()) { 
-    // Create connection
-    include_once 'core/db_mysqli_connect.php';
-
-    // set parameters
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
-    var_dump($stmt);
-    $stmt->bind_param("sss", $name, $email, $message);
-
-    $stmt->execute();
-    $stmt->close();
-    $conn->close();
-
-    $_SESSION['notification'] = "Thanks for your feedback!";
-
-    header("location: ./#contact");
-}  
+$user = new User(); 
 
 ?>
 
@@ -530,8 +507,9 @@ unset($_SESSION['notification']);
 
         // prepare and bind
         $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+        var_dump($stmt);
         $stmt->bind_param("sss", $name, $email, $message);
-        
+        echo "here";
         $stmt->execute();
         $stmt->close();
         $conn->close();
