@@ -71,7 +71,7 @@ $validations = "";
             }
             //Check file extension type error
             else if($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif" ){
-                $validations = 'Error: File type must be .png | .jpg | .jpeg | .gif. Please try another image.';
+                $validations = 'Error: File type must be .png | .jpg | .jpeg | .gif. Please try another image';
             }
             if ($validations == ""){
                 //Get image contents, name and size
@@ -98,8 +98,7 @@ $validations = "";
                 else if($width > 2600){
                     $image_path = resize($ext, $width, $height,  $image_path, $filename, "3");
                 }
-            }      
-        }
+            }
         ?>
             
             <div class="col-sm-11" style="text-align: center; margin-top: -20px; margin-left: 24px;" >
