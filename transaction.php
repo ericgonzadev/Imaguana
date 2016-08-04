@@ -46,6 +46,7 @@ else{
 
     //check if user already bought the license
     $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'unlimited' ");
+    echo $result->num_rows;
     if ($result->num_rows > 0) {
         header("location: ./purchases.php#" . $image->data()->id);
     }

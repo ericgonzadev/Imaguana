@@ -58,7 +58,7 @@
 
             <!-- Copyright -->
             <div class="pull-left">
-                <p>Imaguana &copy; 2015 All rights reserved.</p>
+                <p>Imaguana &copy; 2016 All rights reserved.</p>
             </div>
 
             <!-- Documentation -->
