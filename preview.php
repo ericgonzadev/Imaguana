@@ -112,7 +112,11 @@ $validations = "";
             default:
                 $src= imagecreatefromjpeg($image_path);
         }
-        if ($size == "1.5"){
+        if ($size == "1.25"){
+            $newWidth = $width/1.25;
+            $newHeight = $height/1.25;
+        }
+        else if ($size == "1.5"){
             $newWidth = $width/1.5;
             $newHeight = $height/1.5;
         }
@@ -127,18 +131,6 @@ $validations = "";
         else if ($size == "3"){
             $newWidth = $width/3;
             $newHeight = $height/3;
-        }
-        else if ($size == "3.5"){
-            $newWidth = $width/3.5;
-            $newHeight = $height/3.5;
-        }
-        else if ($size == "4"){
-            $newWidth = $width/4;
-            $newHeight = $height/4;
-        }
-        else if ($size == "4.5"){
-            $newWidth = $width/4.5;
-            $newHeight = $height/4.5;
         }
         $tmp = imagecreatetruecolor($newWidth, $newHeight);
         imagecopyresampled($tmp, $src, 0,0,0,0, $newWidth, $newHeight, $width, $height);
