@@ -83,16 +83,16 @@ $validations = "";
                 move_uploaded_file($filetmpname, $image_path);
                 if($width < 1200){
                 }
-                else if($width > 1200 && $width < 1500 ){
+                else if($width > 1200 && $width <= 1500 ){
                     $image_path = resize($ext, $width, $height,  $image_path, $filename, "1.25");
                 }
-                else if($width > 1500 && $width < 1800){
+                else if($width > 1500 && $width <= 1800){
                     $image_path = resize($ext, $width, $height,  $image_path, $filename, "1.5");
                 }
-                else if($width > 1800 && $width < 2200){
+                else if($width > 1800 && $width <= 2200){
                     $image_path = resize($ext, $width, $height,  $image_path, $filename, "2");
                 } 
-                else if($width > 2200 && $width < 2600){
+                else if($width > 2200 && $width <= 2600){
                     $image_path = resize($ext, $width, $height,  $image_path, $filename, "2.5");
                 }  
                 else if($width > 2600){
