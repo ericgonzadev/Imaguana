@@ -2,28 +2,26 @@
 require 'core/init.php';
 
 //Connection
-include_once 'core/db_connection.php';
+include 'core/db_connection.php';
 
 $user = new User(); 
 
 if (Input::exist()){    
     //Connection
-    include_once 'core/db_connection.php';
+    include 'core/db_mysqli_connect.php';
     
-    $m = new Message();
-    //Set parameters
+     // prepare and bind
+    $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $message);
+
+    // set parameters and execute
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-        
-    //Store message into database.
-    $lastid = $m->create( array(
-            'name' => $name,
-            'email' => $email,
-            'message' => $message
-        )
-    );
-    
+    $stmt->execute();
+    $stmt->close();
+    $conn->close();
+
     $_SESSION['notification'] = "Thanks for your feedback!";
     
     header("location: ./#contact");
