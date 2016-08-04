@@ -6,7 +6,28 @@ include_once 'core/db_connection.php';
 
 $user = new User(); 
 
-?>
+if (Input::exist()){    
+    //Connection
+    include_once 'core/db_connection.php';
+    
+    $m = new Message();
+    //Set parameters
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+        
+    //Store message into database.
+    $lastid = $m->create( array(
+            'name' => $name,
+            'email' => $email,
+            'message' => $message
+        )
+    );
+    
+    $_SESSION['notification'] = "Thanks for your feedback!";
+    
+    header("location: ./#contact");
+} ?>
 
 <!doctype html>
 <head>
@@ -495,28 +516,6 @@ unset($_SESSION['notification']);
         </div>
     </section>
     <!-- End Contact Section --> 
-    <?php 
-    if (Input::exist()) { 
-        // Create connection
-        include_once 'core/db_mysqli_connect.php';
-
-        // set parameters and execute
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
-
-        // prepare and bind
-        $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
-        var_dump($stmt);
-        $stmt->bind_param("sss", $name, $email, $message);
-        echo "here";
-        $stmt->execute();
-        $stmt->close();
-        $conn->close();
-        $_SESSION['notification'] = "Thanks for your feedback!";
-        header("location: ./#contact");
-    }                  
-?>
 
     <!-- Footer Start -->
     <footer class="ws-footer" style="margin-top: -20px;">
