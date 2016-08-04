@@ -63,31 +63,49 @@ $validations = "";
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
             
             if(empty($filename)){
-               $validations = 'Error: No background image was selected';
+               $validations = 'Error: No background image was selected. Please try another image.';
             }
             // Check for file size erro
             else if ($_FILES["image"]["size"] > 2000000 || $_FILES["image"]["size"] <= 0){
-                 $validations = 'Error: File size must be less than 2mb';
+                 $validations = 'Error: File size must be less than 2mb. Please try another image.';
             }
             //Check file extension type error
             else if($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif" ){
-                $validations = 'Error: File type must be .png | .jpg | .jpeg | .gif';
+                $validations = 'Error: File type must be .png | .jpg | .jpeg | .gif. Please try another image.';
             }
             if ($validations == ""){
-            //Get image contents, name and size
-            $image = addslashes(file_get_contents($filetmpname));
-            $image_name = addslashes($filename);
-            list($width, $height) = getimagesize($filetmpname);
+                //Get image contents, name and size
+                $image = addslashes(file_get_contents($filetmpname));
+                $image_name = addslashes($filename);
+                list($width, $height) = getimagesize($filetmpname);
 
-            $image_path = getenv('OPENSHIFT_DATA_DIR') . "/preview/" . $filename;
-            move_uploaded_file($filetmpname, $image_path);
-            }
+                $image_path = getenv('OPENSHIFT_DATA_DIR') . "/preview/" . $filename;
+                move_uploaded_file($filetmpname, $image_path);
+                if($width < 1200){
+                }
+                else if($width > 1200 && $width < 1500 ){
+                    $image_path = resize($ext, $width, $height,  $image_path, $filename, "1.25");
+                }
+                else if($width > 1500 && $width < 1800){
+                    $image_path = resize($ext, $width, $height,  $image_path, $filename, "1.5");
+                }
+                else if($width > 1800 && $width < 2200){
+                    $image_path = resize($ext, $width, $height,  $image_path, $filename, "2");
+                } 
+                else if($width > 2200 && $width < 2600){
+                    $image_path = resize($ext, $width, $height,  $image_path, $filename, "2.5");
+                }  
+                else if($width > 2600){
+                    $image_path = resize($ext, $width, $height,  $image_path, $filename, "3");
+                }
+            }      
+        }
         ?>
             
             <div class="col-sm-11" style="text-align: center; margin-top: -20px; margin-left: 24px;" >
                 <ul style="margin-bottom: 30px;">  
                     <li class="ws-shop-cart" type='none'>
-                        <a href="preview.php" class="btn btn-sm">Upload another Background picture</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="preview.php" class="btn btn-sm">Upload another Background image</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="image/show/<?php echo $image_id ?>" class="btn btn-sm " style="width: 340px;">Go back to the image details</a>
                     </li>
                 </ul>

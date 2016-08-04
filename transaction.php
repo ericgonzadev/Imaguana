@@ -52,7 +52,6 @@ else{
         $true = 1;
         return true;
     }
-    echo "True: " . $true;
     $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = '" . $_POST['license'] . "'");
     if ($result->num_rows > 0 && $true = 0) {
         header("location: ./purchases.php#" . $image->data()->id);
@@ -79,7 +78,6 @@ else{
             $conn->close();
             header("location: ./purchases.php#" . $image->data()->id);
         }
-        echo "True: " . $true;
         $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'web'");
         if(($_POST['license'] == "print" || $_POST['license'] == "unlimited") && $result->num_rows > 0){
             $license = "unlimited";
