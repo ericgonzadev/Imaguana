@@ -1,9 +1,11 @@
 <?php
 class Message {
 
-    private $_db,
-            $_data;
+    private $_db, $_data;
 
+    public function __construct($video = null) {
+        $this->_db = DB::getInstance();
+    }
 
     public function listAll() {
         $data = $this->_db->get('messages', array('id', '>=', '1'));
