@@ -59,7 +59,7 @@ else{
         $true = 1;
         return true;
     }
-    else if ($true = 0){
+    else{
         //change license to unlimited if user buys both licenses seperately
         $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'print'");
         if(($_POST['license'] == "web" || $_POST['license'] == "unlimited") && $result->num_rows > 0){
