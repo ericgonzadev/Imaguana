@@ -46,14 +46,20 @@ else{
 
     //check if user already bought the license
     $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'unlimited'");
+    $true = 0;
     if ($result->num_rows > 0){
         header("location: ./purchases.php#" . $image->data()->id);
+        $true = 1;
+        return true;
     }
+
     $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = '" . $_POST['license'] . "'");
-    if ($result->num_rows > 0) {
+    if ($result->num_rows > 0 && $true = 0) {
         header("location: ./purchases.php#" . $image->data()->id);
+        $true = 1;
+        return true;
     }
-    else{
+    else if ($true = 0){
         //change license to unlimited if user buys both licenses seperately
         $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'print'");
         if(($_POST['license'] == "web" || $_POST['license'] == "unlimited") && $result->num_rows > 0){
