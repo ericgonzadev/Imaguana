@@ -515,6 +515,28 @@ unset($_SESSION['notification']);
     </section>
     <!-- End Contact Section --> 
 
+    <?php 
+    if (Input::exist()){    
+        //Connection
+        include 'core/db_mysqli_connect.php';
+        
+         // prepare and bind
+        $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $name, $email, $message);
+
+        // set parameters and execute
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $stmt->execute();
+        $stmt->close();
+        $conn->close();
+
+        $_SESSION['notification'] = "Thanks for your feedback!";
+        
+        header("location: ./#contact");
+    } ?>
+
     <!-- Footer Start -->
     <footer class="ws-footer" style="margin-top: -20px;">
         <div class="container">
