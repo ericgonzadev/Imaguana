@@ -79,6 +79,7 @@ else{
             $conn->close();
             header("location: ./purchases.php#" . $image->data()->id);
         }
+        echo "True: " . $true;
         $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'web'");
         if(($_POST['license'] == "print" || $_POST['license'] == "unlimited") && $result->num_rows > 0){
             $license = "unlimited";
@@ -104,7 +105,7 @@ else{
             // set parameters and execute
             $user_id = $user->data()->id;
             $image_id = $image->data()->id;
-            $license;
+            $license = $_POST['license'];
             $price = $image->data()->$license;
             $type = "image";
             $stmt->execute();
