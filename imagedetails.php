@@ -136,6 +136,7 @@ $user = new User;
                                 </div>
                                 <!-- Button -->
                                 <input hidden="true" name="imageid" type="text" <?php echo 'value="' . $image->data()->id . '"' ?> >
+                                <input hidden="true" name="type" type="text" value="image" >
                                 <?php if ($user->isLoggedIn() && ($user->data()->id == $image->data()->user_id || $user->data()->group == 3)){ ?>
                                 <a style="margin-top: -10px;" class="btn ws-btn-fullwidth" href="image/edit/<?php echo $image->data()->id; ?>">Edit Image</a>                
                                 <?php }else if ($user->isLoggedIn()){?>
