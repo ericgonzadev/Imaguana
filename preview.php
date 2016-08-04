@@ -99,6 +99,7 @@ $validations = "";
                     $image_path = resize($ext, $width, $height,  $image_path, $filename, "3");
                 }
             }
+            list($width, $height) = getimagesize($image_path);
         ?>
             
             <div class="col-sm-11" style="text-align: center; margin-top: -20px; margin-left: 24px;" >
