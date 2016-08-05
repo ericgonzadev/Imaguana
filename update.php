@@ -94,7 +94,7 @@ if($user->data()->group == 3){
                         die($e->getMessage());
                     }
                 }
-                Redirect::to("user/profile/$link");
+                Redirect::to("user/$link");
             } else {
                 foreach ($validation->errors() as $error) {
                     $count++;
@@ -189,7 +189,7 @@ else{
                         die($e->getMessage());
                     }
                 }
-                Redirect::to("user/profile/$link");
+                Redirect::to("user/$link");
             } else {
                 foreach ($validation->errors() as $error) {
                     $count++;
@@ -309,7 +309,7 @@ else{
                                 <!-- Button -->
                                 <input class="btn ws-btn-fullwidth" style=" width: 200px;" type="submit" value="Update Profile" name="submit">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="user/profile/<?php echo $u->data()->username; ?>" class="btn ws-btn-black" style="color: white; width: 150px" >Cancel</a>
+                                <a href="user/<?php echo $u->data()->username; ?>" class="btn ws-btn-black" style="color: white; width: 150px" >Cancel</a>
                             </div>
                         </div>
                     </div>
@@ -396,7 +396,7 @@ else{
                                 <!-- Button -->
                                 <input class="btn ws-btn-fullwidth" style=" width: 200px;" type="submit" value="Update Profile" name="submit">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="user/profile/<?php echo $user->data()->username; ?>" class="btn ws-btn-black" style="color: white; width: 150px" >Cancel</a>
+                                <a href="user/<?php echo $user->data()->username; ?>" class="btn ws-btn-black" style="color: white; width: 150px" >Cancel</a>
                             </div>
                         </div>
                     </div>

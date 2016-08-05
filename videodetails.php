@@ -44,7 +44,7 @@ $user = new User();
                         <div class="ws-product-details">
                             <!-- Author -->
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Artist</span></h3><br>
-                            <a href="<?php echo str_replace(' ', '', rawurldecode("user/profile/" . $video->data()->username)); ?>" <p style="margin-top: 4px;"><?php echo $video->data()->username; ?></p></a><br>
+                            <a href="<?php echo str_replace(' ', '', rawurldecode("user/" . $video->data()->username)); ?>" <p style="margin-top: 4px;"><?php echo $video->data()->username; ?></p></a><br>
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Description</span></h3><br>
                             <p style="margin-top: 5px;"><?php echo $video->data()->description; ?></p><br>
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Category</span></h3><br>

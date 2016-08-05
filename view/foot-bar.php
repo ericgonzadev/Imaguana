@@ -41,8 +41,8 @@
                     <h3>Support</h3>
                     <div class="ws-footer-separator"></div>
                     <ul>
-                        <li><a href="faq.php#privacy">Privacy Policy</a></li>
-                        <li><a href="faq.php">F.A.Q</a></li>
+                        <li><a href="/FAQ#privacy">Privacy Policy</a></li>
+                        <li><a href="/FAQ">F.A.Q</a></li>
                         <li><a href="./#contact">Contact Us</a></li>
                     </ul>
                 </div>

@@ -83,7 +83,7 @@ else {
                             </li>
                         <?php } if($user->data()->group != 3){ ?>
                         <li class="ws-shop-cart">
-                            <a href="purchases.php" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">View Purchases</a>
+                            <a href="purchases" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">View Purchases</a>
                         </li> 
                     <?php }else if($user->data()->group == 3){ ?>
                         <li class="ws-shop-cart">

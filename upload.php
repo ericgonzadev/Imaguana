@@ -279,7 +279,7 @@ if ($user->data()->group != 1) {
                                 <div class="col-sm-11">
                                     <!-- Button -->
                                     <input class="btn ws-btn-fullwidth" style="margin-top: 15px; width: 300px;" type="submit" value="Upload" name="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="user/profile/<?php echo $user->data()->username; ?>" class="btn ws-btn-black" style="color: white; margin-top: 15px; width: 250px" >Cancel</a>
+                                    <a href="user/<?php echo $user->data()->username; ?>" class="btn ws-btn-black" style="color: white; margin-top: 15px; width: 250px" >Cancel</a>
                                 </div>
                                 <input type="hidden" name="user_id" id="user_id" value=" <?php echo $user->data()->id; ?>">
                                 <input type="hidden" name="username" id="username" value=" <?php echo $user->data()->username; ?>">

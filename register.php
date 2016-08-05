@@ -5,7 +5,7 @@ $validations = "";
 $user = new User();
 if ($user->isLoggedIn()) {
     $link = $user->data()->username;
-    Redirect::to("user/profile/$link");
+    Redirect::to("user/$link");
 }
 if (Input::exist()) {
     if (Token::check(Input::get('token'))) {
@@ -51,7 +51,7 @@ if (Input::exist()) {
                 Session::flash('home', 'Registered Successfully');
                 $login = $user->login(Input::get('username'), Input::get('password'), $remember);
                 $link = $user->data()->username;
-                Redirect::to("user/profile/$link");
+                Redirect::to("user/$link");
             } catch (Exception $e) {
                 die($e->getMessage());
             }
@@ -146,7 +146,7 @@ if (Input::exist()) {
                     <div class="form-group">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" name="agree" id="agree">I accept the <a target="blank" href="faq.php">Terms of Service</a> and <a target="blank" href="faq.php#privacy">Privacy Policy</a>
+                                <input type="checkbox" name="agree" id="agree">I accept the <a target="blank" href="/FAQ">Terms of Service</a> and <a target="blank" href="/FAQ#privacy">Privacy Policy</a>
                             </label>
                         </div>
                     </div>

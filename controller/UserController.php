@@ -1,20 +1,14 @@
 <?php
 
 require_once 'core/init.php';
-require_once("classes/Image.php");
+require_once("classes/User.php");
 
 Class UserController {
 
     function profile($params) {
-        $username = $params[0];
-        //$image = Image::withID($id);
-        include_once("profile.php");
+        $username = $params;
+        echo username;
     }
-
-    // function browse() {
-    //     include_once("imageresults.php");
-    // }
-
 }
 
 ?>

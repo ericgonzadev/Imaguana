@@ -64,7 +64,7 @@ if (Input::exist()){
                 <?php } else { ?>
                     <!-- Account -->
                     <li class="ws-shop-account">
-                        <a href="user/profile/<?php echo $user->data()->username; ?>" class="btn btn-sm">Hello, <?php echo $user->data()->name; ?></a>
+                        <a href="user/<?php echo $user->data()->username; ?>" class="btn btn-sm">Hello, <?php echo $user->data()->name; ?></a>
                     </li>
                     <li class="ws-shop-account">
                         <a href="logout.php" class="btn btn-sm">Logout</a>
@@ -114,18 +114,18 @@ if (Input::exist()){
                         <?php } else {
                             ?>
                             <li class="dropdown">
-                            <a href="user/profile/<?php echo $user->data()->username; ?>" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">My Account<span class="caret"></span></a>
+                            <a href="user/<?php echo $user->data()->username; ?>" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">My Account<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <?php if ($user->data()->group != 2){ ?>
                                     <li><a href="upload.php">Upload an image</a></li>
                                     <li><a href="videoupload.php">Upload a video</a></li>
                                 <?php } ?>
-                                <li><a href="purchases.php">View purchases</a></li>
+                                <li><a href="purchases">View purchases</a></li>
                             </ul>
                         </li>
                         <?php } ?>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="faq.php">F.A.Q.</a></li>
+                        <li><a href="/FAQ">F.A.Q.</a></li>
                     </ul>
                 </div>
             </div>
@@ -562,8 +562,8 @@ unset($_SESSION['notification']);
                     <h3>Support</h3>
                     <div class="ws-footer-separator"></div>
                     <ul>
-                        <li><a href="faq.php#privacy">Privacy Policy</a></li>
-                        <li><a href="faq.php">F.A.Q</a></li>
+                        <li><a href="/FAQ#privacy">Privacy Policy</a></li>
+                        <li><a href="/FAQ">F.A.Q</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>

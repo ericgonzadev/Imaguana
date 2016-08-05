@@ -30,7 +30,7 @@ $navbar = '
                 else{
                     $navbar .= "<!-- Account -->
                     <li class='ws-shop-account'>
-                        <a href='user/profile/$link' class='btn btn-sm'>Hello, {$name}</a>
+                        <a href='user/$link' class='btn btn-sm'>Hello, {$name}</a>
                     </li>
                     <li class='ws-shop-account'>
                         <a href='logout.php' class='btn btn-sm'>Logout</a>
@@ -80,20 +80,20 @@ $navbar = '
                     }
                     else{
                         $navbar .= '<li class="dropdown">
-                            <a href="user/profile/' . $user->data()->username .'" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">My Account<span class="caret"></span></a>
+                            <a href="user/' . $user->data()->username .'" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">My Account<span class="caret"></span></a>
                             <ul class="dropdown-menu">';
                             if ($user->data()->group != 2){
                                 $navbar .= '<li><a href="upload.php">Upload an image</a></li>
                                 <li><a href="videoupload.php">Upload a video</a></li>';
                             } 
-                            $navbar .= '<li><a href="purchases.php">View purchases</a></li>
+                            $navbar .= '<li><a href="purchases">View purchases</a></li>
                             </ul>
                         </li>';
                     }   
 
                     $navbar .=    '<li><a href="./#contactA">Contact</a></li>
                         
-                            <li><a href="faq.php">F.A.Q.</a></li>
+                            <li><a href="/FAQ">F.A.Q.</a></li>
                             
                     </ul>
                 </div>

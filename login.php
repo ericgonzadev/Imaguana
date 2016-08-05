@@ -4,7 +4,7 @@ $user = new User();
 $credentials = "";
 if ($user->isLoggedIn()) {
     $link = $user->data()->username;
-    Redirect::to("user/profile/$link");
+    Redirect::to("user/$link");
 }
 if (Input::exist()) {
     if (Token::check(Input::get('token'))) {
@@ -22,7 +22,7 @@ if (Input::exist()) {
 
             if ($login) {
                 $link = $user->data()->username;
-                Redirect::to("user/profile/$link");
+                Redirect::to("user/$link");
             } else {
                 $credentials = '<p style="text-align: center; color: red;"> Username or Password is incorrect  </p>';
             }

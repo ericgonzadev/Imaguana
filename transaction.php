@@ -16,7 +16,7 @@ if($_POST['type'] == "video"){
     //check if user already bought the license
     $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND video_id = " . $video->data()->id . " AND license = '" . $_POST['license'] . "'");
     if ($result->num_rows > 0) {
-        header("location: ./purchases.php#video_" . $video->data()->id);
+        header("location: ./purchases#video_" . $video->data()->id);
     }
     else{
         // prepare and bind
@@ -34,7 +34,7 @@ if($_POST['type'] == "video"){
         $stmt->close();
         $conn->close();
 
-        header("location: ./purchases.php#video_" . $video->data()->id);
+        header("location: ./purchases#video_" . $video->data()->id);
     }
 }
 else{   
@@ -48,13 +48,13 @@ else{
     $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'unlimited'");
     $true = 0;
     if ($result->num_rows > 0){
-        header("location: ./purchases.php#" . $image->data()->id);
+        header("location: ./purchases#" . $image->data()->id);
         $true = 1;
         return true;
     }
     $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = '" . $_POST['license'] . "'");
     if ($result->num_rows > 0 && $true = 0) {
-        header("location: ./purchases.php#" . $image->data()->id);
+        header("location: ./purchases#" . $image->data()->id);
         $true = 1;
         return true;
     }
@@ -76,7 +76,7 @@ else{
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            header("location: ./purchases.php#" . $image->data()->id);
+            header("location: ./purchases#" . $image->data()->id);
         }
         $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->data()->id . " AND image_id = " . $image->data()->id . " AND license = 'web'");
         if(($_POST['license'] == "print" || $_POST['license'] == "unlimited") && $result->num_rows > 0){
@@ -94,7 +94,7 @@ else{
         $stmt->execute();
         $stmt->close();
         $conn->close();
-        header("location: ./purchases.php#" . $image->data()->id);
+        header("location: ./purchases#" . $image->data()->id);
         }
         else{
             // prepare and bind
@@ -109,7 +109,7 @@ else{
             $stmt->execute();
             $stmt->close();
             $conn->close();
-            header("location: ./purchases.php#" . $image->data()->id);
+            header("location: ./purchases#" . $image->data()->id);
         }
     }
 }

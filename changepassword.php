@@ -37,7 +37,7 @@ if (Input::exist()) {
                         );
 
                 Session::flash('home', 'Updated Password Successfully');
-                Redirect::to("user/profile/$link");
+                Redirect::to("user/$link");
             }
         }
         else {
@@ -100,7 +100,7 @@ if (Input::exist()) {
                         <!-- Button -->
                         <input class="btn ws-btn-fullwidth" style=" width: 200px;" type="submit" value="Change Password" name="submit">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="user/profile/<?php echo $user->data()->username; ?>" class="btn ws-btn-black" style="color: white; width: 150px" >Cancel</a>
+                        <a href="user/<?php echo $user->data()->username; ?>" class="btn ws-btn-black" style="color: white; width: 150px" >Cancel</a>
                     </div>
 
                     <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
