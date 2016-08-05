@@ -1,4 +1,6 @@
 <?php
+
+require_once 'core/init.php';
 require_once("classes/Video.php");
 
 Class VideoController {
