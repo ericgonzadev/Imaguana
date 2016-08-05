@@ -113,7 +113,7 @@ if ($user->data()->group != 1) {
                     'image' => "uploads/uploads/" . $filename,
 		            'category' => $category,
                     'tags' => $tags ));
-            header("location:image/show/". $lastid);
+            header("location: /image/show/". $lastid);
         } 
         else {
             foreach ($validation->errors() as $error) {
@@ -182,7 +182,7 @@ if ($user->data()->group != 1) {
 ?>
 <!doctype html>
 <head>
-    <title>Imaguana | Upload</title>
+    <title>Imaguana | Upload Image</title>
 
     <!-- CSS, Meta, Ajax, etc. -->
     <?php include 'view/head.php' ?>

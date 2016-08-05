@@ -77,7 +77,7 @@ if(isset($_POST['submit'])){
                 'embeded' => $embeded,
                 'category' => $category,
                 'tags' => $tags));
-        header("location:video/show/" . $lastid);
+        header("location: /video/show/" . $lastid);
     }
     else {
         foreach ($validation->errors() as $error) {
@@ -89,7 +89,7 @@ if(isset($_POST['submit'])){
 ?>
 <!doctype html>
 <head>
-    <title>Imaguana | Upload</title>
+    <title>Imaguana | Upload Video</title>
 
     <!-- CSS, Meta, Ajax, etc. -->
     <?php include 'view/head.php' ?>
