@@ -12,7 +12,7 @@ Class ImageController {
         include_once("imagedetails.php");
     }
 
-    function browse() {
+    function results() {
         include_once("imageresults.php");
     }
 

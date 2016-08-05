@@ -1,7 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine On
 RewriteRule ^videoresults.php$ http://imag-uana.rhcloud.com/videoresults [R=301,L]
-RewriteRule ^imageresults.php$ http://imag-uana.rhcloud.com/imageresults [R=301,L]
 RewriteRule ^index.php$ http://imag-uana.rhcloud.com [R=301,L]
 RewriteRule ^faq.php$ http://imag-uana.rhcloud.com/FAQ [R=301,L]
 RewriteRule ^purchases.php$ http://imag-uana.rhcloud.com/purchases [R=301,L]
