@@ -76,14 +76,14 @@ else {
                         if ($user->data()->group == 1) {
                             ?>
                             <li class="ws-shop-cart">
-                                <a href="upload.php" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">Upload an Image</a>
+                                <a href="user/<?php echo $user->data()->username; ?>/uploadimage" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">Upload an Image</a>
                             </li>
                             <li class="ws-shop-cart">
-                                <a href="videoupload.php" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">Upload a Video</a>
+                                <a href="user/<?php echo $user->data()->username; ?>/uploadvideo" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">Upload a Video</a>
                             </li>
                         <?php } if($user->data()->group != 3){ ?>
                         <li class="ws-shop-cart">
-                            <a href="purchases" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">View Purchases</a>
+                            <a href="user/<?php echo $user->data()->username; ?>/purchases" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">View Purchases</a>
                         </li> 
                     <?php }else if($user->data()->group == 3){ ?>
                         <li class="ws-shop-cart">

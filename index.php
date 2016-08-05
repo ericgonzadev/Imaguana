@@ -117,10 +117,10 @@ if (Input::exist()){
                             <a href="user/<?php echo $user->data()->username; ?>" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">My Account<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <?php if ($user->data()->group != 2){ ?>
-                                    <li><a href="upload.php">Upload an image</a></li>
-                                    <li><a href="videoupload.php">Upload a video</a></li>
+                                    <li><a href="user/<?php echo $user->data()->username; ?>/uploadimage">Upload an image</a></li>
+                                    <li><a href="user/<?php echo $user->data()->username; ?>/uploadvideo">Upload a video</a></li>
                                 <?php } ?>
-                                <li><a href="purchases">View purchases</a></li>
+                                <li><a href="user/<?php echo $user->data()->username; ?>/purchases">View purchases</a></li>
                             </ul>
                         </li>
                         <?php } ?>

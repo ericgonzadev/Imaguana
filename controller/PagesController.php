@@ -6,10 +6,6 @@ Class PagesController {
         include_once("faq.php");
     }
 
-    function purchases() {
-        include_once("purchases.php");
-    }
-
     function login() {
         include_once("login.php");
     }

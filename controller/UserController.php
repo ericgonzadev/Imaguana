@@ -17,6 +17,18 @@ Class UserController {
     function changepassword() {
         include_once("changepassword.php");
     }
+
+    function uploadimage() {
+        include_once("imageupload.php");
+    }
+
+    function uploadvideo() {
+        include_once("videoupload.php");
+    }
+
+    function purchases() {
+        include_once("purchases.php");
+    }
 }
 
 ?>
