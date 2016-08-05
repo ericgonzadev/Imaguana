@@ -11,9 +11,9 @@ Class UserController {
         include_once("profile.php");
     }
 
-    function browse() {
-        include_once("imageresults.php");
-    }
+    // function browse() {
+    //     include_once("imageresults.php");
+    // }
 
 }
 

@@ -27,11 +27,11 @@ Class ImageController {
         include_once("imageupdate.php");
     }
 
-    function delete($params) {
-        $id = $params[0];
-        $image = new Image($id);
-        include_once("imagedelete.php");
-    }
+    // function delete($params) {
+    //     $id = $params[0];
+    //     $image = new Image($id);
+    //     include_once("imagedelete.php");
+    // }
 
 }
 

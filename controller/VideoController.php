@@ -28,11 +28,11 @@ Class VideoController {
         include_once("videoupdate.php");
     }
 
-    function delete($params) {
-        $id = $params[0];
-        $video = new Video($id);
-        include_once("videodelete.php");
-    }
+    // function delete($params) {
+    //     $id = $params[0];
+    //     $video = new Video($id);
+    //     include_once("videodelete.php");
+    // }
 
 }
 

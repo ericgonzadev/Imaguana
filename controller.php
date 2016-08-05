@@ -2,6 +2,7 @@
 include_once 'controller/ImageController.php';
 include_once 'controller/UserController.php';
 include_once 'controller/VideoController.php';
+include_once 'controller/PagesController.php';
 
 $path = ltrim($_SERVER['REQUEST_URI'], '/');    // Trim leading slash(es)
 $elements = explode('/', $path);                // Split path on slashes to an array
