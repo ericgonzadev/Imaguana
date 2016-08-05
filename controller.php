@@ -20,7 +20,7 @@ switch($type) {
         $action = $elements;
         echo "action = " . $action;
         if($action){
-            $controller->$action($username);
+            $controller->$action[0]($username);
         }
         else{
             $controller->profile($username);
