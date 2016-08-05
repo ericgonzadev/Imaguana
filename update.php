@@ -341,7 +341,7 @@ else{
             <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="text-center">
-                        <img height="210" width="510" src="<?php echo ($user->data()->profile_picture_path == "") ? 'assets/img/profile_pictures/avatar.jpg' : $user->data()->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
+                        <img height="210" width="510" src="<?php echo ($user->data()->profile_picture_path == "") ? 'assets/img/profile_pictures/avatar.jpg' : $user->data()->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="profile"><br><br>
                         <h3 style="color: black;">Change your profile picture</h3><br>  
                         <input name="image" type="file" id="fileToUpload" onchange="imagepreview(this);" class="text-center center-block well well-sm" /><br>
                         <p style="color:black;" >New Profile Picture Preview:</p>
