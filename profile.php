@@ -133,7 +133,7 @@ else {
                         <ul style="margin-bottom: 25px;">  
                             <li class="ws-shop-cart" type='none'>
                                 <a href=<?php echo '"user/' . $username . '/update"  class="btn btn-sm"'?> >Edit Profile</a>&nbsp;&nbsp;
-                                <a href="changepassword" class="btn btn-sm " >Change Password</a>
+                                <a href=<?php echo '"user/' . $username . '/changepassword"  class="btn btn-sm "'?> >Change Password</a>
                             </li>
                         </ul><br>
                     <?php }
