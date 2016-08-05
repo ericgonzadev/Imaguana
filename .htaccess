@@ -4,6 +4,8 @@ RewriteBase /
 RewriteRule ^user/profile/(.*)$ http://imag-uana.rhcloud.com/user/$1 [R=301,L]
 RewriteRule ^imageresults.*$ http://imag-uana.rhcloud.com/image/results [R=301,L]
 RewriteRule ^videoresults.*$ http://imag-uana.rhcloud.com/video/results [R=301,L]
+RewriteRule ^faq.*$ http://imag-uana.rhcloud.com/FAQ [R=301,L]
+RewriteRule ^purchases.*$ http://imag-uana.rhcloud.com/purchases [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
