@@ -13,7 +13,7 @@ Class VideoController {
     }
 
     function results() {
-        include_once("videodetails.php");
+        include_once("videoresults.php");
     }
 
     function tag($params) {

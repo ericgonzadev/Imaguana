@@ -13,6 +13,7 @@ switch($type) {
         break;
     case 'user':
         $controller = new UserController();
+        $controller->profile($type);
         break;
     case 'video':
         $controller = new VideoController();
