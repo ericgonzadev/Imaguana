@@ -189,7 +189,7 @@ else{
                         die($e->getMessage());
                     }
                 }
-                Redirect::to("user/$link");
+                Redirect::to("/user/$link");
             } else {
                 foreach ($validation->errors() as $error) {
                     $count++;
