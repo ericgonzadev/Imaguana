@@ -584,7 +584,7 @@ unset($_SESSION['notification']);
 
             <!-- Payments -->
             <div class="pull-right">
-                <p><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLeXhuZG1VZ0ViMVJlV01pR1o3NGlUOEUzeW53/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/twinpair/Imaguana" target="blank">Source Code</a></p> 
+                <p><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/twinpair/Imaguana" target="blank">Source Code</a></p> 
             </div>
         </div>
     </div>
