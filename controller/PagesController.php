@@ -3,7 +3,7 @@
 Class PagesController {
 
     function FAQ() {
-        include_once("/FAQ");
+        include_once("faq.php");
     }
 
     function purchases() {
