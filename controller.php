@@ -18,7 +18,6 @@ switch($type) {
         $controller = new UserController();
         $username = array_shift($elements);
         $action = $elements;
-        echo "action = " . $action;
         if($action){
             $controller->$action[0]($username);
         }
