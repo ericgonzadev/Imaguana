@@ -218,8 +218,6 @@ else{
                 var filerd = new FileReader();
                 filerd.onload = function (e) {
                     $('#imgpreview').attr('src', e.target.result);
-                    $('#imgpreview').attr('width', 450);
-                    $('#imgpreview').attr('class'. "avatar img-circle img-thumbnail");
                 };
                 filerd.readAsDataURL(input.files[0]);
             }
@@ -258,7 +256,7 @@ else{
                         <h3 style="color: black;">Change your profile picture</h3><br>  
                         <input name="image" type="file" id="fileToUpload" onchange="imagepreview(this);" class="text-center center-block well well-sm" /><br>
                         <p style="color:black;" >New Profile Picture Preview:</p>
-                        <img id="imgpreview" alt="Preview" width="100" />
+                        <img id="imgpreview" alt="Image Preview" width="450" class="avatar img-circle img-thumbnail" />
                     </div>
                 </div>
                 <!-- edit form column -->
@@ -345,7 +343,7 @@ else{
                         <h3 style="color: black;">Change your profile picture</h3><br>  
                         <input name="image" type="file" id="fileToUpload" onchange="imagepreview(this);" class="text-center center-block well well-sm" /><br>
                         <p style="color:black;" >New Profile Picture Preview:</p>
-                        <img id="imgpreview" alt="Preview" width="100" />
+                        <img id="imgpreview" alt="Image Preview" width="450" class="avatar img-circle img-thumbnail" />
                     </div>
                 </div>
                 <!-- edit form column -->
