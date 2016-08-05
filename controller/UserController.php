@@ -13,6 +13,10 @@ Class UserController {
     function update() {
         include_once("update.php");
     }
+
+    function changepassword() {
+        include_once("changepassword.php");
+    }
 }
 
 ?>

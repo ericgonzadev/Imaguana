@@ -37,7 +37,7 @@ if (Input::exist()) {
                         );
 
                 Session::flash('home', 'Updated Password Successfully');
-                Redirect::to("user/$link");
+                Redirect::to("/user/$link");
             }
         }
         else {
