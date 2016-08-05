@@ -83,10 +83,10 @@ $navbar = '
                             <a href="user/' . $user->data()->username .'" class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">My Account<span class="caret"></span></a>
                             <ul class="dropdown-menu">';
                             if ($user->data()->group != 2){
-                                $navbar .= '<li><a href="user/' . $user->data()->username; . '/uploadimage">Upload an image</a></li>
-                                    <li><a href="user/'. $user->data()->username; . '/uploadvideo">Upload a video</a></li>';
+                                $navbar .= '<li><a href="user/' . $user->data()->username . '/uploadimage">Upload an image</a></li>
+                                    <li><a href="user/'. $user->data()->username . '/uploadvideo">Upload a video</a></li>';
                             } 
-                            $navbar .= '<li><a href="user/' . $user->data()->username; . '/purchases">View purchases</a></li>
+                            $navbar .= '<li><a href="user/' . $user->data()->username . '/purchases">View purchases</a></li>
                             </ul>
                         </li>';
                     }   
