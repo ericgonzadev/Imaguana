@@ -63,7 +63,7 @@
 
             <!-- Documentation -->
             <div class="pull-right">
-                <p><a style="color: #C2A476; margin-right:50px;"https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/twinpair/Imaguana" target="blank">Source Code</a></p> 
+                <p><a style="color: #C2A476; margin-right:50px; href="https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/twinpair/Imaguana" target="blank">Source Code</a></p> 
             </div>
         </div>
     </div>
