@@ -218,6 +218,8 @@ else{
                 var filerd = new FileReader();
                 filerd.onload = function (e) {
                     $('#imgpreview').attr('src', e.target.result);
+                    $('#imgpreview').attr('width', 450);
+                    $('#imgpreview').attr('class'. "avatar img-circle img-thumbnail");
                 };
                 filerd.readAsDataURL(input.files[0]);
             }
@@ -251,12 +253,12 @@ else{
             <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="text-center">
-                        <?php echo "assets/img/profile_pictures/" . $u->data()->profile_picture_path ?>
-                        <img height="210" width="510"src="assets/img/profile_pictures/<?php echo $u->data()->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
+                        <?php echo $u->data()->profile_picture_path ?>
+                        <img height="210" width="510" src="<?php echo ($user->data()->profile_picture_path == "") ? 'assets/img/profile_pictures/avatar.jpg' : $user->data()->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
                         <h3 style="color: black;">Change your profile picture</h3><br>  
                         <input name="image" type="file" id="fileToUpload" onchange="imagepreview(this);" class="text-center center-block well well-sm" /><br>
                         <p style="color:black;" >New Profile Picture Preview:</p>
-                        <img id="imgpreview" alt="Preview will be displayed here" width="450" class="avatar img-circle img-thumbnail"/>
+                        <img id="imgpreview" alt="Preview" width="100" />
                     </div>
                 </div>
                 <!-- edit form column -->
@@ -339,11 +341,11 @@ else{
             <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="text-center">
-                        <img height="210" width="510"src="assets/img/profile_pictures/<?php echo ($user->data()->profile_picture_path == "") ? 'avatar.jpg' : $user->data()->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
+                        <img height="210" width="510" src="<?php echo ($user->data()->profile_picture_path == "") ? 'assets/img/profile_pictures/avatar.jpg' : $user->data()->profile_picture_path ?>" class="avatar img-circle img-thumbnail" alt="avatar"><br><br>
                         <h3 style="color: black;">Change your profile picture</h3><br>  
                         <input name="image" type="file" id="fileToUpload" onchange="imagepreview(this);" class="text-center center-block well well-sm" /><br>
                         <p style="color:black;" >New Profile Picture Preview:</p>
-                        <img id="imgpreview" alt="Preview will be displayed here" width="450" class="avatar img-circle img-thumbnail"/>
+                        <img id="imgpreview" alt="Preview" width="100" />
                     </div>
                 </div>
                 <!-- edit form column -->
