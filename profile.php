@@ -132,7 +132,7 @@ else {
                     if ($user->isLoggedIn() && strtolower($user->data()->username) == strtolower($username) ) { ?>
                         <ul style="margin-bottom: 25px;">  
                             <li class="ws-shop-cart" type='none'>
-                                <a href=<?php echo '"user/$username/update"  class="btn btn-sm"'?> >Edit Profile</a>&nbsp;&nbsp;
+                                <a href=<?php echo '"user/' . $username . '/update"  class="btn btn-sm"'?> >Edit Profile</a>&nbsp;&nbsp;
                                 <a href="changepassword.php" class="btn btn-sm " >Change Password</a>
                             </li>
                         </ul><br>
