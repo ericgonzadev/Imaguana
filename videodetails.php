@@ -44,7 +44,7 @@ $user = new User();
                         <div class="ws-product-details">
                             <!-- Author -->
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Artist</span></h3><br>
-                            <a href="<?php echo str_replace(' ', '', rawurldecode("user/" . $video->data()->username)); ?>" <p style="margin-top: 4px;"><?php echo $video->data()->username; ?></p></a><br>
+                            <a style=" color: #0000EE;" href="<?php echo str_replace(' ', '', rawurldecode("user/" . $video->data()->username)); ?>" <p style="margin-top: 4px;"><?php echo $video->data()->user . "&nbsp(" . $video->data()->username . "&nbsp)" ?></p></a><br>
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Description</span></h3><br>
                             <p style="margin-top: 5px;"><?php echo $video->data()->description; ?></p><br>
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Category</span></h3><br>
@@ -57,7 +57,7 @@ $user = new User();
                             <p style="color: black; margin-top: 5px; margin-bottom: 15px;">
                             <?php $tags = preg_split('[, ]',$video->data()->tags); 
                             foreach($tags as $tag)
-                                echo '<a style="margin-top: 4px; color: #0000EE;" href=video/tag/'.$tag.' >'.$tag.'</a>  ';  ?>
+                                echo '<a style="margin-top: 4px; color: #0000EE;" href=video/tag/'.$tag.' >'.$tag.',&nbsp</a>  ';  ?>
                                         </p><br>
                             <div class="row">
                                 <div class="col-sm-6 col-sm-offset-4">
