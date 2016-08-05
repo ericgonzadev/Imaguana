@@ -1,6 +1,7 @@
 Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
+RewriteRule ^imageresults.*$ http://imag-uana.rhcloud.com/image/results [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
