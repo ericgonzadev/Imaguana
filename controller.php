@@ -17,7 +17,8 @@ switch($type) {
     case 'user':
         $controller = new UserController();
         $username = array_shift($elements);
-        $controller->profile($username);
+        $action = $elements
+        $action ? $controller->$action($username) : $controller->profile($username);
         break;
     case 'video':
         $controller = new VideoController();

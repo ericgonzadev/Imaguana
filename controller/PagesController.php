@@ -11,7 +11,7 @@ Class PagesController {
     }
 
     function login() {
-        include_once("login");
+        include_once("login.php");
     }
 
     function signup() {

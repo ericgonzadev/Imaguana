@@ -95,7 +95,7 @@ else {
             <br>
             <!-- edit form column -->
             <div style="font-size: 17px;" class="col-md-8 col-sm-6 col-xs-12 personal-info">
-                <form class="form-horizontal" role="form" method="POST" action="update.php">
+                <form class="form-horizontal" role="form" method="POST">
                     <div class="form-group">
                         <label class="col-lg-3 control-label" style="margin-bottom: 23px; color:black;"><b>Username:</b></label>
                         <div class="col-md-8" style="padding-top: 8px; color:black;">
@@ -132,7 +132,7 @@ else {
                     if ($user->isLoggedIn() && strtolower($user->data()->username) == strtolower($username) ) { ?>
                         <ul style="margin-bottom: 25px;">  
                             <li class="ws-shop-cart" type='none'>
-                                <a href="update.php" class="btn btn-sm" ">Edit Profile</a>&nbsp;&nbsp;
+                                <a href="update" class="btn btn-sm" ">Edit Profile</a>&nbsp;&nbsp;
                                 <a href="changepassword.php" class="btn btn-sm " >Change Password</a>
                             </li>
                         </ul><br>
