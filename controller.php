@@ -17,7 +17,8 @@ switch($type) {
         $controller = new VideoController();
         break;
     default:
-        break;
+       $controller = new PagesController();
+       $controller->$type();
 }
 
 $action = array_shift($elements);
