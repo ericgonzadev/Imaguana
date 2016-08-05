@@ -13,6 +13,8 @@ $user = new User();
     
     <!-- CSS, Meta, Ajax, etc. -->
     <?php include 'view/head.php' ?>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 </head>
 <body>
 

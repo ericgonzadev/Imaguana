@@ -19,6 +19,8 @@ $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->da
 
     <!-- CSS, Meta, Ajax, etc. -->
     <?php include 'view/head.php' ?>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
     
     <!-- Copy Button Script-->
     <script src="assets/js/clipboard.min.js"></script>

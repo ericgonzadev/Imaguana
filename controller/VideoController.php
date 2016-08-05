@@ -1,6 +1,4 @@
 <?php
-
-require_once 'core/init.php';
 require_once("classes/Video.php");
 
 Class VideoController {
@@ -20,7 +18,6 @@ Class VideoController {
         $searchtag = $params[0];
         include_once("imageresults.php");
     }
-
 
     function edit($params) {
         $id = $params[0];
