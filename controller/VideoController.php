@@ -12,7 +12,7 @@ Class VideoController {
         include_once("videodetails.php");
     }
 
-    function browse() {
+    function results() {
         include_once("videodetails.php");
     }
 
