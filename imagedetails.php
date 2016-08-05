@@ -77,7 +77,7 @@ $user = new User;
                             <p style="color: black; margin-top: 5px; margin-bottom: 15px;"><?php echo $image->data()->description; ?></p>
                             <!-- Category -->
                             <h3 style="text-decoration: underline; color: #D5AD92; margin-bottom: 15px;"><span style="color: black;">Category</span></h3>
-                            <p style="margin-bottom: 15px;"><a style="margin-top: 4px; color: #0000EE;" href="imageresults.php#<?php echo strtolower($image->data()->category) ?>" ><?php echo $image->data()->category ?></a></p>
+                            <p style="margin-bottom: 15px;"><a style="margin-top: 4px; color: #0000EE;" href="image/results#<?php echo strtolower($image->data()->category) ?>" ><?php echo $image->data()->category ?></a></p>
                             <!-- Tags -->
                             <h3 style="text-decoration: underline; color: #D5AD92; margin-bottom: 15px;"><span style="color: black;">Tags</span></h3>
                             <p style="color: black; margin-top: 5px; margin-bottom: 15px;">
@@ -167,9 +167,9 @@ $user = new User;
                                                 <h4 ><b>ID:</b> ' . $image->data()->id . '<h4><br>
                                                 <h4><b>Licenses:</b> &nbsp;&nbsp;Web-$' . $image->data()->web . ' &nbsp;&nbsp;Print-$' . $image->data()->print . ' &nbsp;&nbsp;Unlimited-$' . $image->data()->unlimited . '</h4>
                                                 <br>
-                                                <h4>or you can <a href="login.php"><span>Login</span></a> to your account to save the transaction!</h4>
+                                                <h4>or you can <a href="login"><span>Login</span></a> to your account to save the transaction!</h4>
                                                 <br>
-                                                <h4>Dont have an account? <a href="register.php"><span>Sign Up</span></a> today!</h4><br>
+                                                <h4>Dont have an account? <a href="signup"><span>Sign Up</span></a> today!</h4><br>
                                                 <div class="form-group">
                                                         <label class="col-md-3 control-label"></label>
                                                         <div class="col-md-8" style="margin-left: 300px">

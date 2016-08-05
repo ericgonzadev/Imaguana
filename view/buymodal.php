@@ -67,9 +67,9 @@ if ($user->isLoggedIn()) {
                                     <h4>write down the title and type of license</h4>
                                     <h4>and contact CII at <span style="color: black;">(415)855-8555</span></h4>
                                     <br>
-                                    <h4>or <a href="login.php"><span>log in</span></a> to your account</h4>
+                                    <h4>or <a href="login"><span>log in</span></a> to your account</h4>
                                     <br>
-                                    <h4>dont have an account? <a href="register.php"><span>sign in</span></a> today!</h4>
+                                    <h4>dont have an account? <a href="signup"><span>sign in</span></a> today!</h4>
                                     <div class="ws-separator"></div>
                                     <p>Image Title: ' . $image->data()->title . '</p>
                                     <p style="margin-top: 10px;">Image ID: ' . $image->data()->id . '</p>

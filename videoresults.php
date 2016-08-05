@@ -241,9 +241,9 @@ $modal = "";
                                                 <h4 ><b>ID:</b> ' . $video->id . '<h4><br>
                                                 <h4><b>Licenses:</b> &nbsp;&nbsp;Web-$' . $video->web . '</h4>
                                                 <br>
-                                                <h4>or you can <a href="login.php"><span>Login</span></a> to your account to save the transaction!</h4>
+                                                <h4>or you can <a href="login"><span>Login</span></a> to your account to save the transaction!</h4>
                                                 <br>
-                                                <h4>Dont have an account? <a href="register.php"><span>Sign Up</span></a> today!</h4><br>
+                                                <h4>Dont have an account? <a href="signup"><span>Sign Up</span></a> today!</h4><br>
                                                 <div class="form-group">
                                                         <label class="col-md-3 control-label"></label>
                                                         <div class="col-md-8" style="margin-left: 300px">
@@ -478,9 +478,9 @@ $modal = "";
                                                 <h4 ><b>ID:</b> ' . $video->id . '<h4><br>
                                                 <h4><b>Licenses:</b> &nbsp;&nbsp;Web - $' . $video->web . '</h4>
                                                 <br>
-                                                <h4>or you can <a href="login.php"><span>Login</span></a> to your account to save the transaction!</h4>
+                                                <h4>or you can <a href="login"><span>Login</span></a> to your account to save the transaction!</h4>
                                                 <br>
-                                                <h4>Dont have an account? <a href="register.php"><span>Sign Up</span></a> today!</h4><br>
+                                                <h4>Dont have an account? <a href="signup"><span>Sign Up</span></a> today!</h4><br>
                                                     <div class="form-group">
                                                         <label class="col-md-3 control-label"></label>
                                                         <div class="col-md-8" style="margin-left: 300px">
@@ -541,10 +541,10 @@ $modal = "";
     <script type="text/javascript">
         function OnSubmitForm(){
             if(document.myform.filter[0].selected == true){
-              document.myform.action ="imageresults.php";
+              document.myform.action ="image/results";
             }
             else if(document.myform.filter[1].selected == true){
-              document.myform.action ="videoresults.php";
+              document.myform.action ="video/results";
             }
             return true;
         }

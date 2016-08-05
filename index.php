@@ -56,10 +56,10 @@ if (Input::exist()){
                 <?php if (!$user->isLoggedIn()) { ?>
                     <!-- Account -->
                     <li class="ws-shop-account">
-                        <a href="login.php" class="btn btn-sm">Login</a>
+                        <a href="login" class="btn btn-sm">Login</a>
                     </li>
                     <li class="ws-shop-account">
-                        <a href="register.php" class="btn btn-sm">Sign Up</a>
+                        <a href="signup" class="btn btn-sm">Sign Up</a>
                     </li>
                 <?php } else { ?>
                     <!-- Account -->
@@ -102,15 +102,15 @@ if (Input::exist()){
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">Browse<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="imageresults.php">Browse Images</a></li>
-                                <li><a href="videoresults.php">Browse Videos</a></li>
+                                <li><a href="image/results">Browse Images</a></li>
+                                <li><a href="video/results">Browse Videos</a></li>
                             </ul>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
 
                         <?php if (!$user->isLoggedIn()) { ?>
-                            <li><a href="login.php" class="btn btn-sm">My Account</a></li>
+                            <li><a href="login" class="btn btn-sm">My Account</a></li>
                         <?php } else {
                             ?>
                             <li class="dropdown">
@@ -176,10 +176,10 @@ if (Input::exist()){
                      <script type="text/javascript">
                             function OnSubmitForm(){
                               if(document.myform.filter[0].selected == true){
-                                document.myform.action ="imageresults.php";
+                                document.myform.action ="image/results";
                               }
                               else if(document.myform.filter[1].selected == true){
-                                document.myform.action ="videoresults.php";
+                                document.myform.action ="video/results";
                               }
                               return true;
                             }
@@ -190,7 +190,7 @@ if (Input::exist()){
     </div>                
     <!-- End Slider FullWidth -->    
 
-    <form action="imageresults.php" method="POST">
+    <form action="image/results" method="POST">
         <input hidden="true" name="search" type="text" value="Animals">
         <input style="background-color: white; border-width: 0px; color: #0000EE;" type="submit" value="">
     </form>
@@ -277,7 +277,7 @@ if (Input::exist()){
                     
                     <!-- Item -->
                     <div class="col-sm-4 featured-collections-item">
-                        <a href="imageresults.php#animal">
+                        <a href="image/results#animal">
                             <div class="thumbnail">
                                 <img src="assets/img/category/animals.jpg" alt="Alternative Text">
                                 <div class="ws-overlay">
@@ -291,7 +291,7 @@ if (Input::exist()){
 
                     <!-- Item -->
                     <div class="col-sm-4 featured-collections-item">
-                        <a href="imageresults.php#landmark">
+                        <a href="image/results#landmark">
                             <div class="thumbnail">
                                 <img src="assets/img/category/landmarks.jpg" alt="Alternative Text">
                                 <div class="ws-overlay">
@@ -305,7 +305,7 @@ if (Input::exist()){
                     
                     <!-- Item -->
                     <div class="col-sm-4 featured-collections-item">
-                        <a href="imageresults.php#space">
+                        <a href="image/results#space">
                             <div class="thumbnail">
                                 <img src="assets/img/category/space.jpg" alt="Alternative Text">
                                 <div class="ws-overlay">
@@ -539,8 +539,8 @@ unset($_SESSION['notification']);
                     <h3>Shop</h3>
                     <div class="ws-footer-separator"></div>
                     <ul>
-                        <li><a href="imageresults.php">Browse All</a></li>
-                        <li><a href="imageresults.php">Search Catalog</a></li>
+                        <li><a href="image/results">Browse All</a></li>
+                        <li><a href="image/results">Search Catalog</a></li>
                         <li><a href="#featuredImages">Featured Images</a></li>
                         <li><a href="#featuredCategories">Featured Categories</a></li>
                     </ul>

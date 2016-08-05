@@ -9,6 +9,14 @@ Class PagesController {
     function purchases() {
         include_once("purchases.php");
     }
+
+    function login() {
+        include_once("login");
+    }
+
+    function signup() {
+        include_once("register.php");
+    }
 }
 
 ?>

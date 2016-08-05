@@ -158,7 +158,7 @@ if (Input::exist()) {
 
                 <!-- Link -->
                 <div class="ws-register-link">
-                    <a href="login.php">Already have an account? Sign in here.</a>
+                    <a href="login">Already have an account? Sign in here.</a>
                 </div>
             </div>
 

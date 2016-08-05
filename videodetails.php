@@ -48,7 +48,7 @@ $user = new User();
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Description</span></h3><br>
                             <p style="margin-top: 5px;"><?php echo $video->data()->description; ?></p><br>
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Category</span></h3><br>
-                            <form action="videoresults.php" method="POST">
+                            <form action="video/results" method="POST">
                                 <input hidden="true" name="search" type="text" value=<?php echo $video->data()->category ?> >
                                 <input style="background-color: white; border-width: 0px; color: #0000EE;" type="submit" value=<?php echo $video->data()->category ?> >
                             </form><br>
@@ -113,9 +113,9 @@ $user = new User();
                                                 <h4 ><b>ID:</b> ' . $video->data()->id . '<h4><br>
                                                 <h4><b>Licenses:</b> &nbsp;&nbsp;Web-$' . $video->data()->web . '</h4>
                                                 <br>
-                                                <h4>or you can <a href="login.php"><span>Login</span></a> to your account to save the transaction!</h4>
+                                                <h4>or you can <a href="login"><span>Login</span></a> to your account to save the transaction!</h4>
                                                 <br>
-                                                <h4>Dont have an account? <a href="register.php"><span>Sign Up</span></a> today!</h4><br>
+                                                <h4>Dont have an account? <a href="signup"><span>Sign Up</span></a> today!</h4><br>
                                                 <div class="form-group">
                                                         <label class="col-md-3 control-label"></label>
                                                         <div class="col-md-8" style="margin-left: 300px">

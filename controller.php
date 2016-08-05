@@ -10,6 +10,9 @@ $type = array_shift($elements); //Cut array[0]
 switch($type) {
     case 'image':
         $controller = new ImageController();
+        $action = array_shift($elements);
+        $params = $elements;
+        $controller->$action($params);
         break;
     case 'user':
         $controller = new UserController();
@@ -18,16 +21,13 @@ switch($type) {
         break;
     case 'video':
         $controller = new VideoController();
+        $action = array_shift($elements);
+        $params = $elements;
+        $controller->$action($params);
         break;
     default:
        $controller = new PagesController();
        $controller->$type();
+       break;
 }
-
-$action = array_shift($elements);
-$params = $elements;
-
-$controller->$action($params);
-
-
 ?>

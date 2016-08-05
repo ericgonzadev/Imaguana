@@ -21,10 +21,10 @@ $navbar = '
                 <?php if (!$user->isLoggedIn()){
                     $navbar .= '<!-- Account -->
                     <li class="ws-shop-account">
-                        <a href="login.php" class="btn btn-sm">Login</a>
+                        <a href="login" class="btn btn-sm">Login</a>
                     </li>
                      <li class="ws-shop-account">
-                        <a href="register.php" class="btn btn-sm">Sign Up</a>
+                        <a href="signup" class="btn btn-sm">Sign Up</a>
                     </li>';
                 }
                 else{
@@ -69,14 +69,14 @@ $navbar = '
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-hover="dropdown" data-animations="fadeIn">Browse<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="imageresults.php">Browse Images</a></li>
-                                <li><a href="videoresults.php">Browse Videos</a></li>
+                                <li><a href="image/results">Browse Images</a></li>
+                                <li><a href="video/results">Browse Videos</a></li>
                             </ul>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right"> ' ?>
                     <?php if (!$user->isLoggedIn()){
-                        $navbar .= '<li><a href="login.php" class="btn btn-sm">My Account</a></li>';
+                        $navbar .= '<li><a href="login" class="btn btn-sm">My Account</a></li>';
                     }
                     else{
                         $navbar .= '<li class="dropdown">

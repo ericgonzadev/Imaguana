@@ -58,7 +58,7 @@ else {
                 <ul style="list-style: none; ">
                     <?php if ($data->group == 1) { ?>
                         <li class="ws-shop-cart">
-                            <form action="imageresults.php" method="POST">
+                            <form action="image/results" method="POST">
                             <?php if ($user->isLoggedIn() && strtolower($user->data()->username) == strtolower($username) ) { ?>
                                 <input class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;" type="submit" value="BROWSE YOUR WORK" name="submit">
                                 <input type="hidden" name="search" id="search" value="<?php echo $data->username; ?>"> </form>

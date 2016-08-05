@@ -8,7 +8,7 @@ $id = $video->data()->id;
 $user = new User();
 
 if (!$user->isLoggedIn()) {
-    Redirect::to('./login.php');
+    Redirect::to('./login');
 }
 
 if ($user->data()->group == 2) {

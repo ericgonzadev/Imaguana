@@ -18,7 +18,7 @@ Class VideoController {
 
     function tag($params) {
         $searchtag = $params[0];
-        include_once("imageresults.php");
+        include_once("videoresults.php");
     }
 
     function edit($params) {

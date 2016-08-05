@@ -18,8 +18,8 @@
                     <h3>Shop</h3>
                     <div class="ws-footer-separator"></div>
                     <ul>
-                        <li><a href="imageresults.php">Browse Images</a></li>
-                        <li><a href="videoresults.php">Browse Videos</a></li>
+                        <li><a href="image/results">Browse Images</a></li>
+                        <li><a href="video/results">Browse Videos</a></li>
                         <li><a href="./#featuredImages">Featured Images</a></li>
                         <li><a href="./#featuredCategories">Featured Categories</a></li>
                     </ul>

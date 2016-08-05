@@ -95,7 +95,7 @@ if (Input::exist()) {
 
                 <!-- Link -->
                 <div class="ws-register-link">
-                    <a href="register.php" >Click here to sign up for an account. </a>
+                    <a href="signup" >Click here to sign up for an account. </a>
                 </div>                                           
             </div>
         </div>
