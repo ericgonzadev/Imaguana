@@ -10,8 +10,7 @@ Class UserController {
         include_once("profile.php");
     }
 
-    function update($username) {
-        $u = $username;
+    function update() {
         include_once("update.php");
     }
 }
