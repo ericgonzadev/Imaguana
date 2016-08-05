@@ -7,7 +7,7 @@ Class UserController {
 
     function profile($params) {
         $username = $params;
-        include_once("profile.php")
+        include_once("profile.php");
     }
 }
 
