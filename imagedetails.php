@@ -54,7 +54,7 @@ $user = new User;
                         </div>
                     </div>
                     
-                    <form action="/image/preview/<?php echo $image->data()->image; ?>" method="POST">
+                    <form action="/image/preview/<?php echo $image->data()->id; ?>" method="POST">
                     <input style="margin-top: -10px;" class="btn ws-btn-fullwidth" type="submit" value="Preview this image with a background" name="preview" >
                     </form>
                 </div>
