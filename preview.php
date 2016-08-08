@@ -3,8 +3,7 @@ require_once 'core/init.php';
 $user = new User();
 $validations = "";
 
-echo $image->data()->id . "          ";
-echo $image->data()->image;
+$id =  $image->data()->id
 
 $image = new Image($image->data()->id);
 ?>
@@ -106,7 +105,7 @@ $image = new Image($image->data()->id);
             <div class="col-sm-11" style="text-align: center; margin-top: -20px; margin-left: 24px;" >
                 <ul style="margin-bottom: 30px;">  
                     <li class="ws-shop-cart" type='none'>
-                        <a href="/image/preview/<?php $image = new Image(7); echo $image->data()->id; ?>" class="btn btn-sm">Upload another Background image</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/image/preview/<?php $image = new Image($id); echo $image->data()->id; ?>" class="btn btn-sm">Upload another Background image</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="image/show/<?php echo $image->data()->id; ?>" class="btn btn-sm " style="width: 340px;">Go back to the image details</a>
                     </li>
                 </ul>
