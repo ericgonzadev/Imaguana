@@ -151,7 +151,7 @@ if (Input::exist()) {
                                 <div class="col-sm-11">
                                     <!-- Button -->
                                     <input class="btn ws-btn-fullwidth" style="margin-top: 15px; width: 300px;" type="submit" value="Save Changes" name="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="image/show/<?php echo $video->data()->id; ?>" class="btn ws-btn-black" style="color: white; margin-top: 15px; width: 250px" >Cancel</a>
+                                    <a href="video/show/<?php echo $video->data()->id; ?>" class="btn ws-btn-black" style="color: white; margin-top: 15px; width: 250px" >Cancel</a>
                                 </div>
                             </div>
                         </form>
@@ -174,13 +174,7 @@ if (Input::exist()) {
                     <h3 style="text-align: center; color:black;">License Descriptions:</h3>
                     <div class="ws-separator"></div> 
                     <h3 style="text-align: center; color:black;" ><u>Web</u></h3>
-                    <p style="color:black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will receive a URL that you can use on your website to display the image.</p>
-                    <br>
-                    <h3 style="text-align: center; color:black;" ><u>Print</u></h3>
-                    <p style="color:black; text-align: center;">You will receive a downloadable file of the image.</p>
-                    <br>
-                    <h3 style="text-align: center; color:black;" ><u>Unlimited</u></h3>
-                    <p style="color:black; text-align: center;">You will receive the URL and the downloadable file of the image.</p>
+                    <p style="color:black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You will receive a URL that you can use on your website to embeded the video.</p>
                     <br>
                     <div class="form-group">
                         <label class="col-md-3 control-label"></label>
