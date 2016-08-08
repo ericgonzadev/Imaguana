@@ -3,9 +3,7 @@ require_once 'core/init.php';
 $user = new User();
 $validations = "";
 
-$id =  $image->data()->id
-
-$image = new Image($image->data()->id);
+$id =  $image->data()->id;
 ?>
 
 <!DOCTYPE html>
