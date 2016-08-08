@@ -5,6 +5,8 @@ $validations = "";
 
 echo $image->data()->id . "          ";
 echo $image->data()->image;
+
+$image = new Image($image->data()->id);
 ?>
 
 <!DOCTYPE html>
