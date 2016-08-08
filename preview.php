@@ -2,6 +2,9 @@
 require_once 'core/init.php';
 $user = new User();
 $validations = "";
+
+<?php echo $image->data()->id; ?>
+<?php echo $image->data()->image; ?>
 ?>
 
 <!DOCTYPE html>
