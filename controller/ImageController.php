@@ -29,7 +29,7 @@ Class ImageController {
     function preview($params) {
         $id = $params[0];
         $image = new Image($id);
-        include_once("preview.php");
+        include("preview.php");
     }
 
     // function delete($params) {
