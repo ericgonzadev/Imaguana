@@ -8,11 +8,11 @@ $id = $video->data()->id;
 $user = new User();
 
 if (!$user->isLoggedIn()) {
-    Redirect::to('./login');
+    Redirect::to('/login');
 }
 
 if ($user->data()->group == 2) {
-    Redirect::to('./');
+    Redirect::to('/');
 }
 
 if (Input::exist()) {
