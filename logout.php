@@ -5,6 +5,6 @@ $user = new User();
 
 $user->logout();
 
-Redirect::to('./');
+Redirect::to('/');
 
 

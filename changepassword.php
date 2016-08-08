@@ -5,7 +5,7 @@ $count = 0;
 $user = new User();
 $link = $user->data()->username;
 if (!$user->isLoggedIn()) {
-    Redirect::to('./login');
+    Redirect::to('/login');
 }
 if (Input::exist()) {
     if (Token::check(Input::get('token'))) {

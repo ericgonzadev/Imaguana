@@ -5,10 +5,10 @@ $validations = "";
 $user = new User();
 $link = $user->data()->username;
 if (!$user->isLoggedIn()) {
-    Redirect::to("./login");
+    Redirect::to("/login");
 }
 if ($user->data()->group == 2) {
-    Redirect::to('./');
+    Redirect::to('/');
 }
 
 $video = new Video();

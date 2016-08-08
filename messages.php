@@ -7,7 +7,7 @@ include_once 'core/db_mysqli_connect.php';
 $user = new User();
 
 if (!$user->isLoggedIn()) {
-    Redirect::to('./login');
+    Redirect::to('/login');
 }
 
 if ($user->data()->group != 3) {
