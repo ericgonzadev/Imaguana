@@ -8,7 +8,6 @@ Class ImageController {
     function show($params) {
         $id = $params[0];
         $image = new Image($id);
-        //$image = Image::withID($id);
         include_once("imagedetails.php");
     }
 
@@ -25,6 +24,12 @@ Class ImageController {
         $id = $params[0];
         $image = new Image($id);
         include_once("imageupdate.php");
+    }
+
+    function preview($params) {
+        $id = $params[0];
+        $image = new Image($id);
+        include_once("preview.php");
     }
 
     // function delete($params) {

@@ -1,9 +1,6 @@
 <?php
 require_once 'core/init.php';
 $user = new User();
-
-$preview = $_SESSION['previewimage'];
-$image_id = $_SESSION['imageid'];
 $validations = "";
 ?>
 
@@ -105,8 +102,8 @@ $validations = "";
             <div class="col-sm-11" style="text-align: center; margin-top: -20px; margin-left: 24px;" >
                 <ul style="margin-bottom: 30px;">  
                     <li class="ws-shop-cart" type='none'>
-                        <a href="preview.php" class="btn btn-sm">Upload another Background image</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="image/show/<?php echo $image_id ?>" class="btn btn-sm " style="width: 340px;">Go back to the image details</a>
+                        <a href="/image/preview/<?php echo $image->data()->image; ?>" class="btn btn-sm">Upload another Background image</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="image/show/<?php echo $image->data()->id ?>" class="btn btn-sm " style="width: 340px;">Go back to the image details</a>
                     </li>
                 </ul>
             </div><br><br>
@@ -129,7 +126,7 @@ $validations = "";
                     </div>
                     </header>  
                     <div class="component" style="height: <?php echo $height ?>px; width: <?php echo $width ?>px; background: url(<?php echo 'preview/preview/' . $filename ?>) no-repeat;">
-                        <img class="resize-image" src="<?php echo $preview ?>" alt="image for resizing">
+                        <img class="resize-image" src="<?php echo $image->data()->image; ?>" alt="image for resizing">
                     </div>
                     <?php } ?>
                 </div><!-- /content -->
