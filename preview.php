@@ -13,7 +13,6 @@ $validations = "";
         <?php include 'view/head.php' ?>
         <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/preview.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/component.css" />  
 
         <!--Image preview -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
