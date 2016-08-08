@@ -28,6 +28,7 @@ if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $embeded = "";
     $source = "";
+    $user = $_POST['user'];
 
     $validate = new Validate();
     $validation = $validate->check($_POST, array(
@@ -68,6 +69,7 @@ if(isset($_POST['submit'])){
         $lastid = $video->create( array(
                 'id' => '', 
                 'user_id' => $user_id,
+                'user' => $user, 
                 'username' => $username,
                 'title' => $title,
                 'description' => $description,
@@ -160,6 +162,7 @@ if(isset($_POST['submit'])){
                                 </div>
                                 <input type="hidden" name="user_id" id="user_id" value=" <?php echo $user->data()->id; ?>">
                                 <input type="hidden" name="username" id="username" value=" <?php echo $user->data()->username; ?>">
+                                <input type="hidden" name="user" id="user" value="<?php echo $user->data()->name; ?>">
                             </div>
                     </form>
 

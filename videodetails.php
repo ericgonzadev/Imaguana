@@ -46,7 +46,7 @@ $user = new User();
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Artist</span></h3><br>
                             <a style=" color: #0000EE;" href="<?php echo str_replace(' ', '', rawurldecode("user/" . $video->data()->username)); ?>" <p style="margin-top: 4px;"><?php echo $video->data()->user . "&nbsp(" . $video->data()->username . "&nbsp)" ?></p></a><br>
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Description</span></h3><br>
-                            <p style="margin-top: 5px;"><?php echo $video->data()->description; ?></p><br>
+                            <p style="margin-top: 5px; color: black;"><?php echo $video->data()->description; ?></p><br>
                             <h3 style="text-decoration: underline; color: #D5AD92;"><span style="color: black;">Category</span></h3><br>
                             <form action="video/results" method="POST">
                                 <input hidden="true" name="search" type="text" value=<?php echo $video->data()->category ?> >
@@ -75,8 +75,8 @@ $user = new User();
                                     <div class="row">
                                         <div class="col-sm-8 col-sm-offset-2">
                                             <input type="radio" checked="true" name="license" value="web" class="radio pull-left">                                   
-                                            <label for="radio2">Web License</label>
-                                            <p class="pull-right">$<?php echo $video->data()->web; ?></p>
+                                            <label style="color: black;" for="radio2">Web License</label>
+                                            <p style="color: black;" class="pull-right">$<?php echo $video->data()->web; ?></p>
                                         </div>
                                     </div>
                                 </div>

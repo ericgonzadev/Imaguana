@@ -104,10 +104,10 @@ $user = new User;
                                         
                                         <div class="col-sm-8 col-sm-offset-2">
                                             <label style="color: black;" for="radio2">
-                                                <input style="margin-left: -95px;"type="radio" checked="true" id ="radio2" name="license" value="web" class="radio pull-left">                                   
+                                                <input style="margin-left: -95px;" type="radio" checked="true" id ="radio2" name="license" value="web" class="radio pull-left">                                   
                                             Web License
                                             </label>
-                                            <p id ="radio2" style="color: black; " class="pull-right">$<?php echo $image->data()->web; ?></p>
+                                            <p id ="radio2" style="color: black;" class="pull-right">$<?php echo $image->data()->web; ?></p>
                                         </div>
                                     </div>
 
