@@ -5,3 +5,13 @@ Imaguana is an image hosting website that allows you to purchase the license of 
 (NOTICE: This website was made for demonstration purposes only. It is part of a course curriculum at San Francisco State University)
 
 Check us out here: http://imag-uana.rhcloud.com/
+
+Version and Deployment instructions:
+
+* PHP version- 5.3
+
+* Database - MySQL 5.5
+
+* With phpMyAdmin 4.0
+
+* Hosted on RED HAT OPENSHIFT
