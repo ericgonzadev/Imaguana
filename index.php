@@ -583,7 +583,6 @@ unset($_SESSION['notification']);
                     <ul class="ws-footer-social">
                         <li><a href="./#team"><i class="fa fa-users"></i>Our Team</a></li>
                         <li><a href="https://www.facebook.com/Imaguana" target="blank"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></li>
-                        <li><a href="https://twitter.com/imaguana648" target="blank"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
                     </ul>
                 </div>
 
