@@ -9,6 +9,7 @@ if ($user->isLoggedIn()) {
 }
 if (Input::exist()) {
     if (Token::check(Input::get('token'))) {
+        $_POST["username"] = str_replace(' ', '', $_POST["username"]);
         $validate = new Validate();
         $validation = $validate->check($_POST, array(
             'name' => array(
