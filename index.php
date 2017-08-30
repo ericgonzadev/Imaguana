@@ -323,6 +323,36 @@ if (Input::exist()){
     </section>
     <!-- Featured Categories End -->  
 
+    <!-- Preview Feature Start -->  
+    <section id="previewfeature" class="ws-about-section" style="margin-top: -30px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>PREVIEW FEATURE</h3> 
+                    <div class="ws-separator"></div>  
+                    <p style="font-size: 15px; text-align: left;">You can now preview images on your own backgrounds before purchasing them.</p><br>
+                    <h4 style="color: black;">HOW IT WORKS</h4><br>
+                    <div class="col-sm-4 ">
+                        <span style="color: green;">1) <i class="fa fa-file-image-o"></i></span>
+                        <p>First you find an image that you like and want to preview.</p>
+                    </div>
+                    <div class="col-sm-4 ">
+                        <span style="color: green;">2) <i class="fa fa-hand-pointer-o"></i></span>
+                        <p>From the image page, click on the "Preview This Image With A Background" button.</p>
+                    </div>
+                    <div class="col-sm-4 ">
+                        <span style="color: green;">3) <i class="fa fa-sticky-note-o"></i></span>
+                        <p>Then you can upload your background image and preview the selected image to your desired size and location.</p>
+                    </div> 
+                </div>
+                <div class="col-lg-6">
+                    <img style="width: 100%;" src="assets/img/preview.gif">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Preview Feature End -->  
+
     <!-- About Section Start -->
     <section id="about" class="ws-about-section" style="margin-top: -30px;">
         <div class="container">
