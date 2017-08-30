@@ -10,7 +10,7 @@ $navbar = '
     <div class="ws-topbar" id="home">
         <div class="pull-left">
             <div class="ws-topbar-message hidden-xs">
-                <a href="./"><p>Find your <span>perfect</span> image!</p></a> 
+                <p>Find your <span>perfect</span> image!</p> 
             </div>
         </div>
 

@@ -46,7 +46,7 @@ if (Input::exist()){
     <div class="ws-topbar" id="home">
         <div class="pull-left">
             <div class="ws-topbar-message hidden-xs">
-                <a href="./"><p style="color: white;">Find your <span>perfect</span> image!</p></a> 
+                <p style="color: white;">Find your <span>perfect</span> image!</p>
             </div>
         </div>
 
@@ -90,9 +90,7 @@ if (Input::exist()){
                 </div>
                 <!-- Logo -->
                 <div class="ws-logo ws-center">
-                    <a href="./">
-                        <img src="assets/img/iguana_ed.gif" alt="Alternative Text" class="img-responsive">
-                    </a>
+                    <img src="assets/img/iguana_ed.gif" alt="Alternative Text" class="img-responsive">
                 </div>
                 <!-- Links -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
