@@ -1,2 +1,5 @@
 # Ignore DS_store
 .DS_Store
+
+# Ignore DS_store
+test.html
