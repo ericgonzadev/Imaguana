@@ -428,12 +428,12 @@ if (Input::exist()){
                         <h3>Eric Gonzalez<br>
                             <small style="color: black;">Tech Lead / Full Stack Developer</small>
                         </h3>
-                        <p >I enjoy playing video games, watching and playing sports, or anything techie! I'm always eager to learn and experience new things.</p>
+                        <p >I'm a software engineer/web developer that enjoys working in environments where I’m constantly needed and depended on. I am self-disciplined and always learning new things to get the job done. Some of my hobbies include hiking and being outdoors in nature, watching/playing sports, and reading up on anything tech!</p>
                         <ul class="footer-social">
-                            <li><a href="https://www.facebook.com/EricGonzalez1994" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/ericgonzalez1994" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.facebook.com/egonzilla" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/eric-gonzalez-/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="https://github.com/twinpair/" target="_blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="http://www.ericgonzalez1994.com/" target="_blank">Website</a></li>
+                            <li><a href="http://www.eric-gonzalez.com/" target="_blank">Website</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 text-center">
