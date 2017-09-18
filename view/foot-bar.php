@@ -59,7 +59,7 @@
 
             <!-- Copyright -->
             <div class="pull-left">
-                <p>Copyright © <span style="color: white;">Imaguana, All Rights Reserved</p>
+                <p>Copyright © <span style="color: white;">Imaguana</span>, All Rights Reserved</p>
             </div>
 
             <!-- Documentation -->
