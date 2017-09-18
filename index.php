@@ -581,6 +581,7 @@ unset($_SESSION['notification']);
                     <ul class="ws-footer-social">
                         <li><a href="./#team"><i class="fa fa-users"></i>Our Team</a></li>
                         <li><a href="https://www.facebook.com/Imaguana" target="blank"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></li>
+                        <li><a href="https://github.com/twinpair/Imaguana" target="blank"><i class="fa fa-github"></i> Source Code</a></li> 
                     </ul>
                 </div>
 
@@ -589,6 +590,7 @@ unset($_SESSION['notification']);
                     <h3>Support</h3>
                     <div class="ws-footer-separator"></div>
                     <ul>
+                        <li><a href="https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view?usp=sharing" target="blank"><i class="fa fa-file-text"></i> Documentation</a></li>
                         <li><a href="/FAQ#privacy">Privacy Policy</a></li>
                         <li><a href="/FAQ">F.A.Q</a></li>
                         <li><a href="#contact">Contact Us</a></li>
@@ -611,7 +613,7 @@ unset($_SESSION['notification']);
 
             <!-- Payments -->
             <div class="pull-right">
-                <p><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view?usp=sharing" target="blank">Documentation</a><a style="color: #C2A476;" href="https://github.com/twinpair/Imaguana" target="blank">Source Code</a></p> 
+                <p><a style="color: #C2A476; margin-right:50px;" href="https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view?usp=sharing" target="blank"><i class="fa fa-file-text"></i> Documentation</a><a style="color: #C2A476;" href="https://github.com/twinpair/Imaguana" target="blank"><i class="fa fa-github fa-2x"></i> Source Code</a></p> 
             </div>
         </div>
     </div>
