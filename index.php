@@ -608,7 +608,7 @@ unset($_SESSION['notification']);
 
             <!-- Copyright -->
             <div class="pull-left">
-                <p>Imaguana &copy; 2016 All rights reserved.</p>
+                <p>Copyright © <span style="color: white;">Imaguana, All Rights Reserved</p>
             </div>
 
             <!-- Payments -->
