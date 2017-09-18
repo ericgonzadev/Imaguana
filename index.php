@@ -419,8 +419,8 @@ if (Input::exist()){
                         </h3>
                         <p>I am a student studying Computer Science at San Francisco State University. I enjoy long hikes and ostentatious titles.</p>
                         <ul class="footer-social">
-                            <li><a href="https://www.facebook.com/aaron.waterman" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/arwaterman" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.facebook.com/aaron.waterman" target="blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/arwaterman" target="blank"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 text-center">
@@ -428,12 +428,12 @@ if (Input::exist()){
                         <h3>Eric Gonzalez<br>
                             <small style="color: black;">Tech Lead / Full Stack Developer</small>
                         </h3>
-                        <p >I'm a software engineer/web developer that enjoys working in environments where I’m constantly needed and depended on. I am self-disciplined and always learning new things to get the job done. Some of my hobbies include hiking and being outdoors in nature, watching/playing sports, and reading up on anything tech!</p>
+                        <p >I'm a software engineer/web developer that enjoys working in environments where I’m constantly needed and depended on.</p>
                         <ul class="footer-social">
-                            <li><a href="https://www.facebook.com/egonzilla" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/eric-gonzalez-/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://github.com/twinpair/" target="_blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="http://www.eric-gonzalez.com/" target="_blank">Website</a></li>
+                            <li><a href="https://www.facebook.com/egonzilla" target="blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/eric-gonzalez-/" target="blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/twinpair/" target="blank"><i class="fa fa-github"></i></a></li>
+                            <li><a href="http://www.eric-gonzalez.com/" target="blank">Website</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 text-center">
@@ -443,7 +443,7 @@ if (Input::exist()){
                         </h3>
                         <p>Grad student and SFSU staff member. I enjoy playing hockey and skiing.</p>
                         <ul class="footer-social" style="margin-top: 25px;">
-                            <li><a href="https://www.facebook.com/profile.php?id=100012472296075" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100012472296075" target="blank"><i class="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
 
@@ -454,7 +454,7 @@ if (Input::exist()){
                         </h3>
                         <p>I'm a graduate student at SFSU. I enjoy playing board games and video games.</p>
                         <ul class="footer-social">
-                            <li><a href="https://www.facebook.com/magicaldonald" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/magicaldonald" target="blank"><i class="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
 
@@ -465,8 +465,8 @@ if (Input::exist()){
                         </h3>
                         <p>I'm Graduate student at SFSU. I like to travel and enjoy natures beauty!</p>
                         <ul class="footer-social">
-                            <li><a href="https://www.facebook.com/monal.patil" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/monal-patil-51618915" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.facebook.com/monal.patil" target="blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/monal-patil-51618915" target="blank"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="clearfix"></div>
