@@ -88,7 +88,7 @@ if($user->data()->group == 3){
                         list($width, $height) = getimagesize($filetmpname);
 
                         //Store original image locally
-                        $image_path = getenv('OPENSHIFT_DATA_DIR') . "/profile/" . $filename;
+                        $image_path = "profile/" . $filename;
                         move_uploaded_file($filetmpname, $image_path);
                     } catch (Exception $e) {
                         die($e->getMessage());
@@ -183,7 +183,7 @@ else{
                         list($width, $height) = getimagesize($filetmpname);
 
                         //Store original image locally
-                        $image_path = getenv('OPENSHIFT_DATA_DIR') . "/profile/" . $filename;
+                        $image_path = "profile/" . $filename;
                         move_uploaded_file($filetmpname, $image_path);
                     } catch (Exception $e) {
                         die($e->getMessage());

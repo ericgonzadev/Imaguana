@@ -77,7 +77,7 @@ $id =  $image->data()->id;
                 $image_name = addslashes($filename);
                 list($width, $height) = getimagesize($filetmpname);
 
-                $image_path = getenv('OPENSHIFT_DATA_DIR') . "/preview/" . $filename;
+                $image_path = "preview/" . $filename;
                 move_uploaded_file($filetmpname, $image_path);
                 if($width < 1200){
                 }

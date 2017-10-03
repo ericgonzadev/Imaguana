@@ -72,7 +72,7 @@ if ($user->data()->group != 1) {
             list($width, $height) = getimagesize($filetmpname);
             
             //Store original image locally
-            $image_path = getenv('OPENSHIFT_DATA_DIR'). "/uploads/" . $filename;
+            $image_path = "uploads/" . $filename;
             move_uploaded_file($filetmpname, $image_path);
             if($width < 900){
             }
