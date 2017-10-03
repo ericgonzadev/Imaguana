@@ -2,7 +2,7 @@
 
 Imaguana is an image hosting website that allows you to purchase the license of an artist’s image. At Imaguana, a commitment was made to create an extremely simple user interface that anyone will be able to navigate through. We focus on the customer and the artist, with only essential tasks being available at any given time. Our user centered design allows it to stand out above other image hosting sites. Our marketability and brand recognition means that users will continue to return to Imaguana for their image purchasing needs. Imaguana is keen to go to great lengths to create a product that will please anyone whom uses it. 
 
-Check us out here: http://imag-uana.rhcloud.com/
+Check us out here: https://imaguana.000webhostapp.com/
 
 Documentation: https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view
 
@@ -14,7 +14,7 @@ Documentation: https://drive.google.com/file/d/0B-4Vah9LEYrLVHRZbVlrZDVXRzg/view
 
 * With phpMyAdmin 4.0
 
-* Hosted on RED HAT OPENSHIFT
+* Hosted on <a href="https://www.000webhost.com/">000WebHost</a>
 
 ## Deployment Instructions
 
