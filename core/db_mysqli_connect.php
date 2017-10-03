@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'), getenv('OPENSHIFT_GEAR_NAME'));
+$conn = new mysqli("localhost", "id3121600_twinpair", "thebest1", "id3121600_imag");
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }

@@ -4,10 +4,10 @@ session_start();
 
 $GLOBALS['config'] = array(
     'mysql' => array(
-        'host' => '127.13.13.2',
-        'username' => 'admin67KSwkr',
-        'password' => 'c6hsZzfY7pGR',
-        'db' => 'imag'
+        'host' => 'localhost',
+        'username' => 'id3121600_twinpair',
+        'password' => 'thebest1',
+        'db' => 'id3121600_imag'
     ),
     'remember' => array(
         'cookie_name' => 'hash',
