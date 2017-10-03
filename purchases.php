@@ -75,7 +75,7 @@ $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->da
                                                 <div class="ws-separator"></div>
                                                 <h4 style="color:black; text-align: center;">Copy and Paste this source code onto your site:</h4><br>
                                                 <br>
-                                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;http://http://imag-uana.rhcloud.com/' . $image->data()->image . '&quot; >" readonly name="source"><br>
+                                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;https://imaguana.000webhostapp.com/' . $image->data()->image . '&quot; >" readonly name="source"><br>
                                                 <div class="form-group">
                                                     <div class="form-group">
                                                         <label class="col-md-3 control-label"></label>
@@ -145,7 +145,7 @@ $result = $conn->query("SELECT * FROM transactions WHERE user_id = " . $user->da
                                                 <div class="ws-separator"></div>
                                                 <h4 style="color:black; text-align: center;">Copy and Paste this source code onto your site:</h4><br>
                                                 <br>
-                                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;http://imag-uana.rhcloud.com/' . $image->data()->image . '&quot; >" readonly name="source"><br>
+                                                <input id="foo' . $image->data()->id . '" style="color:black; height: 40px; width: 510px; margin-left: -20px;" type="text" value="<img src=&quot;https://imaguana.000webhostapp.com/' . $image->data()->image . '&quot; >" readonly name="source"><br>
                                                 <div class="form-group">
                                                     <div class="form-group">
                                                         <label class="col-md-3 control-label"></label>
