@@ -110,7 +110,7 @@ if ($user->data()->group != 1) {
                     'web' => $web,
                     'print' => $print,
                     'unlimited' => $unlimited,
-                    'image' => "uploads/uploads/" . $filename,
+                    'image' => "uploads/" . $filename,
 		            'category' => $category,
                     'tags' => $tags ));
             header("location: /image/show/". $lastid);
