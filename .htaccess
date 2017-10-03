@@ -15,6 +15,11 @@ ExpiresDefault "access 1 month"
 </IfModule>
 ## EXPIRES CACHING ##
 
+# CACHE CONTROL - 1 Month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
 Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
