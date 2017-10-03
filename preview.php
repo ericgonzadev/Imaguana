@@ -126,7 +126,7 @@ $id =  $image->data()->id;
                         <p style="color: black; font-size: 20px; margin-top: -20px; margin-bottom: 10px;"><strong>Tip: </strong> Hold <span>SHIFT</span> while resizing to keep the original aspect ratio.</p>
                     </div>
                     </header>  
-                    <div class="component" style="height: <?php echo $height ?>px; width: <?php echo $width ?>px; background: url(<?php echo 'preview/preview/' . $filename ?>) no-repeat;">
+                    <div class="component" style="height: <?php echo $height ?>px; width: <?php echo $width ?>px; background: url(<?php echo 'preview/' . $filename ?>) no-repeat;">
                         <img class="resize-image" src="<?php echo $image->data()->image; ?>" alt="image for resizing">
                     </div>
                     <?php } ?>
