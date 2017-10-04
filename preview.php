@@ -17,7 +17,7 @@ $id =  $image->data()->id;
         <link rel="stylesheet" type="text/css" href="assets/css/preview.css" />
 
         <!--Image preview -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
         <script type="text/javascript">
             function imagepreview(input) {
                 if (input.files && input.files[0]) {

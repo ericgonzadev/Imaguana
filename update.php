@@ -211,7 +211,7 @@ else{
     <?php include 'view/head.php';?>
     
     <!--Image preview -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript">
         function imagepreview(input) {
             if (input.files && input.files[0]) {
@@ -299,7 +299,7 @@ else{
                     <div class="form-group">
                         <label class="col-lg-3 control-label" for="website">Website: </label>
                         <div class="col-lg-8">
-                            <input class="form-control" type="text" name="website" id="website" placeholder="ex: http://www.yourwebsite.com/" value="<?php echo $u->data()->website; ?>">
+                            <input class="form-control" type="text" name="website" id="website" placeholder="ex: https://www.yourwebsite.com/" value="<?php echo $u->data()->website; ?>">
                         </div>
                     </div>
                     <div class="form-group" style="margin-left: 100px;">
@@ -386,7 +386,7 @@ else{
                     <div class="form-group">
                         <label class="col-lg-3 control-label" for="website">Website: </label>
                         <div class="col-lg-8">
-                            <input class="form-control" type="text" name="website" id="website" placeholder="ex: http://www.yourwebsite.com/" value="<?php echo $user->data()->website; ?>">
+                            <input class="form-control" type="text" name="website" id="website" placeholder="ex: https://www.yourwebsite.com/" value="<?php echo $user->data()->website; ?>">
                         </div>
                     </div>
                     <div class="form-group" style="margin-left: 100px;">

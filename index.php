@@ -433,7 +433,7 @@ if (Input::exist()){
                             <li><a href="https://www.facebook.com/egonzilla" target="blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/eric-gonzalez-/" target="blank"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="https://github.com/twinpair/" target="blank"><i class="fa fa-github"></i></a></li>
-                            <li><a href="http://www.eric-gonzalez.com/" target="blank">Website</a></li>
+                            <li><a href="https://www.eric-gonzalez.com/" target="blank">Website</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 text-center">

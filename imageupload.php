@@ -188,7 +188,7 @@ if ($user->data()->group != 1) {
     <?php include 'view/head.php' ?>
 
     <!--Image preview -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
     <script type="text/javascript">
         function imagepreview(input) {
             if (input.files && input.files[0]) {
