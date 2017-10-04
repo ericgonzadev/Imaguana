@@ -74,6 +74,10 @@ class Video {
         return $this->_data;
     }
 
+    public function exists() {
+        return (!empty($this->_data)) ? true : false;
+    }
+
 }
 
 ?>

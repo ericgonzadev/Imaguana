@@ -12,7 +12,7 @@ if (!$username)
 
 $user = new User($username);
 if (!$user->exists()) {
-    Redirect::to(404);
+    Redirect::to("/error");
 } 
 else {
     $data = $user->data();
@@ -87,7 +87,7 @@ else {
                         </li> 
                     <?php }else if($user->data()->group == 3){ ?>
                         <li class="ws-shop-cart">
-                            <a href="messages.php" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">View Messages</a>
+                            <a href="/messages" class="btn btn-sm col-sm-12" style="margin-left: -30px; margin-bottom: 10px;">View Messages</a>
                         </li> 
                     <?php }   }?>   
                 </ul>

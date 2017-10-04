@@ -8,8 +8,12 @@ Class VideoController {
     function show($params) {
         $id = $params[0];
         $video = new Video($id);
-        //$video = Video::withID($id);
-        include_once("videodetails.php");
+        if ($video->exists()) {
+            include_once("videodetails.php");
+        }
+        else{
+            Redirect::to("/error");
+        }
     }
 
     function results() {
@@ -24,7 +28,12 @@ Class VideoController {
     function edit($params) {
         $id = $params[0];
         $video = new Video($id);
-        include_once("videoupdate.php");
+        if ($video->exists()) {
+            include_once("videoupdate.php");
+        }
+        else{
+            Redirect::to("/error");
+        }
     }
 
     // function delete($params) {

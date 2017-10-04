@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-    <title>Imaguana | F.A.Q</title>
+    <title>Imaguana | Error</title>
     
     <!-- CSS, Meta, Ajax, etc. -->
     <?php include 'view/head.php' ?>
@@ -20,7 +20,7 @@
                         <div class="ws-separator"></div>   
                     </div>
                     <div style="text-align: center;">
-                        <img src="http://i.wheelsage.org/pictures/peugeot/404_diesel_record_car/autowp.ru_peugeot_404_diesel_record_car_1.jpg" />
+                        <img src="assets/img/404.jpg" />
                 </div>
                 </div> 
             </div>

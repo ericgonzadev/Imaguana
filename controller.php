@@ -12,23 +12,51 @@ switch($type) {
         $controller = new ImageController();
         $action = array_shift($elements);
         $params = $elements;
-        $controller->$action($params);
+        if (method_exists($controller, $action)){
+            $controller->$action($params);
+        }
+        else{
+            $controller = new PagesController();
+            $controller->error();
+        }
         break;
     case 'user':
         $controller = new UserController();
         $username = array_shift($elements);
         $action = $elements;
-        $action ? $controller->$action[0]($username) : $controller->profile($username);
+        if ($action){
+            if (method_exists($controller, $action[0])){
+                $controller->$action[0]($username);
+            }
+            else{
+                $controller = new PagesController();
+                $controller->error();
+            }
+        }
+        else{
+            $controller->profile($username);
+        }
         break;
     case 'video':
         $controller = new VideoController();
         $action = array_shift($elements);
         $params = $elements;
-        $controller->$action($params);
+        if (method_exists($controller, $action)){
+            $controller->$action($params);
+        }
+        else{
+            $controller = new PagesController();
+            $controller->error();
+        }
         break;
     default:
        $controller = new PagesController();
-       $controller->$type();
+       if (method_exists($controller, $type)){
+            $controller->$type();
+       }
+       else{
+            $controller->error();
+       }
        break;
 }
 ?>

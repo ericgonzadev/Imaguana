@@ -13,6 +13,14 @@ Class PagesController {
     function signup() {
         include_once("register.php");
     }
+
+    function messages() {
+        include_once("messages.php");
+    }
+
+    function error(){
+    	include_once("error.php");
+    }
 }
 
 ?>

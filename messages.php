@@ -11,7 +11,7 @@ if (!$user->isLoggedIn()) {
 }
 
 if ($user->data()->group != 3) {
-    Redirect::to(404);
+    Redirect::to('/error');
 }
 $result = $conn->query("SELECT * FROM messages");
 ?>

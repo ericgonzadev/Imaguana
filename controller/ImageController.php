@@ -8,7 +8,12 @@ Class ImageController {
     function show($params) {
         $id = $params[0];
         $image = new Image($id);
-        include_once("imagedetails.php");
+        if ($image->exists()) {
+            include_once("imagedetails.php");
+        }
+        else{
+            Redirect::to("/error");
+        }
     }
 
     function results() {
@@ -23,13 +28,23 @@ Class ImageController {
     function edit($params) {
         $id = $params[0];
         $image = new Image($id);
-        include_once("imageupdate.php");
+        if ($image->exists()) {
+            include_once("imageupdate.php");
+        }
+        else{
+            Redirect::to("/error");
+        }
     }
 
     function preview($params) {
         $id = $params[0];
         $image = new Image($id);
-        include("preview.php");
+        if ($image->exists()) {
+            include("preview.php");
+        }
+        else{
+            Redirect::to("/error");
+        }
     }
 
     // function delete($params) {
