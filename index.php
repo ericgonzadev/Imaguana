@@ -90,7 +90,7 @@ if (Input::exist()){
                 </div>
                 <!-- Logo -->
                 <div class="ws-logo ws-center">
-                    <img src="assets/img/iguana_ed.gif" alt="Alternative Text" class="img-responsive">
+                    <img src="assets/img/iguana.gif" alt="Alternative Text" class="img-responsive">
                 </div>
                 <!-- Links -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -74,7 +74,7 @@ $navbar =
                 <!-- Logo -->
                 <div class="ws-logo ws-center">
                     <a href="./">
-                        <img src="assets/img/iguana_ed.gif" alt="Alternative Text" class="img-responsive">
+                        <img src="assets/img/iguana.gif" alt="Alternative Text" class="img-responsive">
                     </a>
                 </div>
                <!-- Links -->
