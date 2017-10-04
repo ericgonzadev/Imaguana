@@ -56,7 +56,7 @@ if (Input::exist()) {
                 'tags' => Input::get('Tags')
             ), $id);
 
-            Redirect::to("/$account/image/show/$id");
+            Redirect::to("/image/show/$id");
         } catch (Exception $e) {
             die($e->getMessage());
         }

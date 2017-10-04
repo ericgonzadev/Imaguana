@@ -45,7 +45,7 @@ if (Input::exist()) {
             'tags' => Input::get('Tags')
                 ), $id);
 
-        Redirect::to("/$account/video/show/$id");
+        Redirect::to("/video/show/$id");
         } catch (Exception $e) {
             die($e->getMessage());
         }
