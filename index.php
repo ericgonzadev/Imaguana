@@ -344,7 +344,7 @@ if (Input::exist()){
                     </div> 
                 </div>
                 <div class="col-lg-6">
-                    <img style="width: 100%;" src="assets/img/preview.gif">
+                    <img src="https://i.imgur.com/t7U7ip9.gif" title="preview" />
                 </div>
             </div>
         </div>
